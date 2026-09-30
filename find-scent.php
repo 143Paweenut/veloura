@@ -9,22 +9,12 @@
 
 <title>ค้นหากลิ่นที่ใช่ | VELOURA PERFUMES</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================
-   RESET
-========================================= */
 
 * {
     box-sizing: border-box;
@@ -43,6 +33,10 @@ body {
         "Montserrat",
         sans-serif;
 
+    color: #422c35;
+
+    min-height: 100vh;
+
     background:
         radial-gradient(
             circle at top left,
@@ -55,16 +49,12 @@ body {
             #f5dfe3,
             #eee0df
         );
-
-    color: #422c35;
-
-    min-height: 100vh;
 }
 
 
-/* =========================================
+/* =====================================================
    NAVBAR
-========================================= */
+===================================================== */
 
 .navbar {
 
@@ -79,7 +69,7 @@ body {
     padding: 0 7%;
 
     background:
-        rgba(255,255,255,.82);
+        rgba(255,255,255,.88);
 
     backdrop-filter: blur(15px);
 
@@ -90,7 +80,7 @@ body {
 
     top: 0;
 
-    z-index: 20;
+    z-index: 100;
 }
 
 
@@ -170,9 +160,9 @@ body {
 }
 
 
-/* =========================================
+/* =====================================================
    HERO
-========================================= */
+===================================================== */
 
 .hero {
 
@@ -228,9 +218,9 @@ body {
 }
 
 
-/* =========================================
-   CONTAINER
-========================================= */
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
 
 .container {
 
@@ -242,14 +232,10 @@ body {
 }
 
 
-/* =========================================
-   FORM CARD
-========================================= */
-
 .card {
 
     background:
-        rgba(255,255,255,.92);
+        rgba(255,255,255,.94);
 
     border-radius: 30px;
 
@@ -262,6 +248,10 @@ body {
         1px solid rgba(120,80,90,.08);
 }
 
+
+/* =====================================================
+   SECTION
+===================================================== */
 
 .section {
 
@@ -287,9 +277,9 @@ body {
 }
 
 
-/* =========================================
+/* =====================================================
    OPTIONS
-========================================= */
+===================================================== */
 
 .options {
 
@@ -360,9 +350,9 @@ body {
 }
 
 
-/* =========================================
+/* =====================================================
    BUTTON
-========================================= */
+===================================================== */
 
 .submit-btn {
 
@@ -407,9 +397,9 @@ body {
 }
 
 
-/* =========================================
+/* =====================================================
    MESSAGE
-========================================= */
+===================================================== */
 
 .message {
 
@@ -422,6 +412,8 @@ body {
     text-align: center;
 
     font-size: 14px;
+
+    display: none;
 }
 
 
@@ -435,44 +427,25 @@ body {
 }
 
 
-/* =========================================
+.error {
+
+    background: #fff0f0;
+
+    color: #9a4141;
+
+    border: 1px solid #efcccc;
+}
+
+
+/* =====================================================
    RESULTS
-========================================= */
+===================================================== */
 
 .results {
 
     margin-top: 45px;
 
     display: none;
-}
-
-
-.results.show {
-
-    display: block;
-
-    animation: fadeUp .6s ease;
-}
-
-
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(20px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
 }
 
 
@@ -502,10 +475,6 @@ body {
 }
 
 
-/* =========================================
-   PRODUCTS
-========================================= */
-
 .products {
 
     display: grid;
@@ -516,6 +485,10 @@ body {
     gap: 20px;
 }
 
+
+/* =====================================================
+   PRODUCT
+===================================================== */
 
 .product {
 
@@ -535,9 +508,6 @@ body {
 .product:hover {
 
     transform: translateY(-7px);
-
-    box-shadow:
-        0 20px 40px rgba(70,40,50,.16);
 }
 
 
@@ -628,22 +598,18 @@ body {
     font-size: 13px;
 
     font-weight: 600;
-
-    transition: .3s;
 }
 
 
 .view-product:hover {
 
     background: #402633;
-
-    transform: translateY(-2px);
 }
 
 
-/* =========================================
+/* =====================================================
    EMAIL NOTICE
-========================================= */
+===================================================== */
 
 .email-notice {
 
@@ -676,112 +642,94 @@ body {
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* =====================================================
+   LOADING
+===================================================== */
 
-.footer {
+.loading {
 
-    margin-top: 30px;
-
-    padding: 35px 20px;
+    display: none;
 
     text-align: center;
 
-    background: #402936;
+    padding: 20px;
 
-    color: white;
+    color: #8d566a;
 }
 
 
-.footer-logo {
+.loading span {
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    display: inline-block;
 
-    font-size: 27px;
-
-    letter-spacing: 5px;
-
-    font-weight: 700;
+    animation: sparkle 1s infinite;
 }
 
 
-.footer-sub {
+@keyframes sparkle {
 
-    font-size: 10px;
+    0% {
+        opacity: .3;
+        transform: scale(.9);
+    }
 
-    letter-spacing: 3px;
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 
-    margin-top: 7px;
-
-    color: #e5cfd7;
+    100% {
+        opacity: .3;
+        transform: scale(.9);
+    }
 }
 
 
-.footer-copy {
-
-    font-size: 11px;
-
-    margin-top: 15px;
-
-    color: #cdb9c1;
-}
-
-
-/* =========================================
+/* =====================================================
    RESPONSIVE
-========================================= */
+===================================================== */
 
 @media(max-width:750px) {
 
     .hero h1 {
 
         font-size: 45px;
-
     }
 
 
     .card {
 
         padding: 25px 20px;
-
     }
 
 
     .options {
 
         grid-template-columns: 1fr;
-
     }
 
 
     .products {
 
         grid-template-columns: 1fr;
-
     }
 
 
     .navbar {
 
         padding: 0 20px;
-
     }
 
 
     .nav-user {
 
         display: none;
-
     }
 
 
     .logo-main {
 
-        font-size: 27px;
-
+        font-size: 26px;
     }
 
 }
@@ -794,34 +742,34 @@ body {
 <body>
 
 
-<!-- =========================================
+<!-- =====================================================
      NAVBAR
-========================================= -->
+===================================================== -->
 
 <header class="navbar">
 
 <a href="homeveloura.html" class="logo">
 
-    <div class="logo-main">
-        VELOURA
-    </div>
+<div class="logo-main">
+VELOURA
+</div>
 
-    <div class="logo-sub">
-        PERFUMES
-    </div>
+<div class="logo-sub">
+PERFUMES
+</div>
 
 </a>
 
 
 <div class="nav-right">
 
-    <div class="nav-user">
-        ♡ ค้นหากลิ่นของคุณ
-    </div>
+<div class="nav-user">
+♡ Find Your Signature Scent
+</div>
 
-    <a href="homeveloura.html" class="back-btn">
-        กลับหน้าหลัก
-    </a>
+<a href="homeveloura.html" class="back-btn">
+กลับหน้าหลัก
+</a>
 
 </div>
 
@@ -829,55 +777,60 @@ body {
 
 
 
-<!-- =========================================
+<!-- =====================================================
      HERO
-========================================= -->
+===================================================== -->
 
 <section class="hero">
 
-    <div class="eyebrow">
-        FIND YOUR SIGNATURE SCENT
-    </div>
+<div class="eyebrow">
+FIND YOUR SIGNATURE SCENT
+</div>
 
-    <h1>
-        ค้นหากลิ่นที่ใช่สำหรับคุณ ✨
-    </h1>
 
-    <p>
+<h1>
+ค้นหากลิ่นที่ใช่สำหรับคุณ ✨
+</h1>
 
-        ตอบคำถามสั้น ๆ แล้วให้ VELOURA
-        ช่วยค้นหาน้ำหอมที่เข้ากับบุคลิก
-        ไลฟ์สไตล์ และช่วงเวลาของคุณ
-        พร้อมคัดมาให้ถึง <b>3 กลิ่น</b> 💕🌸
 
-    </p>
+<p>
+
+ตอบคำถามสั้น ๆ แล้วให้ VELOURA
+ช่วยค้นหาน้ำหอมที่เข้ากับบุคลิก
+ไลฟ์สไตล์ และช่วงเวลาของคุณ
+พร้อมคัดมาให้ถึง <b>3 กลิ่น</b> 💕🌸
+
+</p>
 
 </section>
 
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <div class="container">
 
 
-<!-- =========================================
+<div id="message" class="message"></div>
+
+
+<!-- =====================================================
      FORM
-========================================= -->
+===================================================== -->
 
 <div class="card">
 
 <form id="scentForm">
 
 
-<!-- =========================================
-     NOTES
-========================================= -->
+<!-- NOTES -->
 
 <div class="section">
 
 <div class="section-title">
-
-    🌸 คุณชอบโทนกลิ่นแบบไหน?
-
+🌸 คุณชอบโทนกลิ่นแบบไหน?
 </div>
 
 
@@ -887,13 +840,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="สดชื่น"
-    id="note1">
+type="checkbox"
+name="favorite_notes"
+value="สดชื่น"
+id="note1">
 
 <label for="note1">
-    🍋 สดชื่น สะอาด มีชีวิตชีวา
+🍋 สดชื่น สะอาด มีชีวิตชีวา
 </label>
 
 </div>
@@ -902,13 +855,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="ดอกไม้"
-    id="note2">
+type="checkbox"
+name="favorite_notes"
+value="ดอกไม้"
+id="note2">
 
 <label for="note2">
-    🌹 ดอกไม้ หอมละมุน โรแมนติก
+🌹 ดอกไม้ หอมละมุน โรแมนติก
 </label>
 
 </div>
@@ -917,13 +870,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="หวาน"
-    id="note3">
+type="checkbox"
+name="favorite_notes"
+value="หวาน"
+id="note3">
 
 <label for="note3">
-    🍰 หวาน น่ารัก ชวนหลงใหล
+🍰 หวาน น่ารัก ชวนหลงใหล
 </label>
 
 </div>
@@ -932,13 +885,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="ไม้"
-    id="note4">
+type="checkbox"
+name="favorite_notes"
+value="ไม้"
+id="note4">
 
 <label for="note4">
-    🌲 ไม้ อบอุ่น สุขุม
+🌲 ไม้ อบอุ่น สุขุม
 </label>
 
 </div>
@@ -947,13 +900,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="เซ็กซี่"
-    id="note5">
+type="checkbox"
+name="favorite_notes"
+value="เซ็กซี่"
+id="note5">
 
 <label for="note5">
-    💋 เซ็กซี่ น่าค้นหา เย้ายวน
+💋 เซ็กซี่ น่าค้นหา เย้ายวน
 </label>
 
 </div>
@@ -962,13 +915,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="หรูหรา"
-    id="note6">
+type="checkbox"
+name="favorite_notes"
+value="หรูหรา"
+id="note6">
 
 <label for="note6">
-    ✨ หรูหรา ดูแพง มีเสน่ห์
+✨ หรูหรา ดูแพง มีเสน่ห์
 </label>
 
 </div>
@@ -977,13 +930,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="วานิลลา"
-    id="note7">
+type="checkbox"
+name="favorite_notes"
+value="วานิลลา"
+id="note7">
 
 <label for="note7">
-    🍦 วานิลลา นุ่มละมุน
+🍦 วานิลลา นุ่มละมุน
 </label>
 
 </div>
@@ -992,13 +945,13 @@ body {
 <div class="option">
 
 <input
-    type="checkbox"
-    name="favorite_notes"
-    value="มัสก์"
-    id="note8">
+type="checkbox"
+name="favorite_notes"
+value="มัสก์"
+id="note8">
 
 <label for="note8">
-    🤍 มัสก์ สะอาด นุ่มนวล
+🤍 มัสก์ สะอาด นุ่มนวล
 </label>
 
 </div>
@@ -1010,16 +963,12 @@ body {
 
 
 
-<!-- =========================================
-     TIME
-========================================= -->
+<!-- TIME -->
 
 <div class="section">
 
 <div class="section-title">
-
-    🕰️ คุณมักใช้น้ำหอมช่วงไหน?
-
+🕰️ คุณมักใช้น้ำหอมช่วงไหน?
 </div>
 
 
@@ -1029,14 +978,14 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="perfume_time"
-    value="กลางวัน"
-    id="time1"
-    required>
+type="radio"
+name="perfume_time"
+value="กลางวัน"
+id="time1"
+required>
 
 <label for="time1">
-    ☀️ กลางวัน
+☀️ กลางวัน
 </label>
 
 </div>
@@ -1045,13 +994,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="perfume_time"
-    value="กลางคืน"
-    id="time2">
+type="radio"
+name="perfume_time"
+value="กลางคืน"
+id="time2">
 
 <label for="time2">
-    🌙 กลางคืน
+🌙 กลางคืน
 </label>
 
 </div>
@@ -1060,13 +1009,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="perfume_time"
-    value="ทุกเวลา"
-    id="time3">
+type="radio"
+name="perfume_time"
+value="ทุกเวลา"
+id="time3">
 
 <label for="time3">
-    ✨ ได้ทุกเวลา
+✨ ได้ทุกเวลา
 </label>
 
 </div>
@@ -1078,16 +1027,12 @@ body {
 
 
 
-<!-- =========================================
-     WEATHER
-========================================= -->
+<!-- WEATHER -->
 
 <div class="section">
 
 <div class="section-title">
-
-    🌤️ สภาพอากาศที่คุณอยู่บ่อย ๆ
-
+🌤️ สภาพอากาศที่คุณอยู่บ่อย ๆ
 </div>
 
 
@@ -1097,14 +1042,14 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="weather"
-    value="ร้อน"
-    id="weather1"
-    required>
+type="radio"
+name="weather"
+value="ร้อน"
+id="weather1"
+required>
 
 <label for="weather1">
-    ☀️ อากาศร้อน
+☀️ อากาศร้อน
 </label>
 
 </div>
@@ -1113,13 +1058,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="weather"
-    value="เย็น"
-    id="weather2">
+type="radio"
+name="weather"
+value="เย็น"
+id="weather2">
 
 <label for="weather2">
-    ❄️ อากาศเย็น
+❄️ อากาศเย็น
 </label>
 
 </div>
@@ -1128,13 +1073,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="weather"
-    value="ทุกสภาพอากาศ"
-    id="weather3">
+type="radio"
+name="weather"
+value="ทุกสภาพอากาศ"
+id="weather3">
 
 <label for="weather3">
-    🌤️ ทุกสภาพอากาศ
+🌤️ ทุกสภาพอากาศ
 </label>
 
 </div>
@@ -1146,16 +1091,12 @@ body {
 
 
 
-<!-- =========================================
-     BUDGET
-========================================= -->
+<!-- BUDGET -->
 
 <div class="section">
 
 <div class="section-title">
-
-    💰 งบประมาณที่คุณต้องการ
-
+💰 งบประมาณที่คุณต้องการ
 </div>
 
 
@@ -1165,14 +1106,14 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="budget"
-    value="ไม่เกิน 60"
-    id="budget1"
-    required>
+type="radio"
+name="budget"
+value="ไม่เกิน 60"
+id="budget1"
+required>
 
 <label for="budget1">
-    💵 ไม่เกิน ฿60
+💵 ไม่เกิน ฿60
 </label>
 
 </div>
@@ -1181,13 +1122,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="budget"
-    value="61-70"
-    id="budget2">
+type="radio"
+name="budget"
+value="61-70"
+id="budget2">
 
 <label for="budget2">
-    💎 ฿61 – ฿70
+💎 ฿61 – ฿70
 </label>
 
 </div>
@@ -1196,13 +1137,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="budget"
-    value="71-80"
-    id="budget3">
+type="radio"
+name="budget"
+value="71-80"
+id="budget3">
 
 <label for="budget3">
-    👑 ฿71 – ฿80
+👑 ฿71 – ฿80
 </label>
 
 </div>
@@ -1214,16 +1155,12 @@ body {
 
 
 
-<!-- =========================================
-     STYLE
-========================================= -->
+<!-- STYLE -->
 
 <div class="section">
 
 <div class="section-title">
-
-    💫 คุณจะใช้น้ำหอมในโอกาสไหนมากที่สุด?
-
+💫 คุณจะใช้น้ำหอมในโอกาสไหนมากที่สุด?
 </div>
 
 
@@ -1233,14 +1170,14 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="buying_style"
-    value="ใช้ทุกวัน"
-    id="style1"
-    required>
+type="radio"
+name="buying_style"
+value="ใช้ทุกวัน"
+id="style1"
+required>
 
 <label for="style1">
-    🌸 ใช้ทุกวัน
+🌸 ใช้ทุกวัน
 </label>
 
 </div>
@@ -1249,13 +1186,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="buying_style"
-    value="ออกเดท"
-    id="style2">
+type="radio"
+name="buying_style"
+value="ออกเดท"
+id="style2">
 
 <label for="style2">
-    💕 ออกเดท
+💕 ออกเดท
 </label>
 
 </div>
@@ -1264,13 +1201,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="buying_style"
-    value="ทำงาน"
-    id="style3">
+type="radio"
+name="buying_style"
+value="ทำงาน"
+id="style3">
 
 <label for="style3">
-    💼 ไปทำงาน
+💼 ไปทำงาน
 </label>
 
 </div>
@@ -1279,13 +1216,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="buying_style"
-    value="ปาร์ตี้"
-    id="style4">
+type="radio"
+name="buying_style"
+value="ปาร์ตี้"
+id="style4">
 
 <label for="style4">
-    🥂 ปาร์ตี้
+🥂 ปาร์ตี้
 </label>
 
 </div>
@@ -1294,13 +1231,13 @@ body {
 <div class="option">
 
 <input
-    type="radio"
-    name="buying_style"
-    value="โอกาสพิเศษ"
-    id="style5">
+type="radio"
+name="buying_style"
+value="โอกาสพิเศษ"
+id="style5">
 
 <label for="style5">
-    👑 โอกาสพิเศษ
+👑 โอกาสพิเศษ
 </label>
 
 </div>
@@ -1313,10 +1250,10 @@ body {
 
 
 <button
-    type="submit"
-    class="submit-btn">
+type="submit"
+class="submit-btn">
 
-    ✨ ค้นหากลิ่นที่ใช่สำหรับฉัน ✨
+✨ ค้นหากลิ่นที่ใช่สำหรับฉัน ✨
 
 </button>
 
@@ -1327,290 +1264,265 @@ body {
 
 
 
-<!-- =========================================
-     RESULTS
-========================================= -->
+<div class="loading" id="loading">
 
-<div
-    class="results"
-    id="results">
+<span>✨ กำลังวิเคราะห์กลิ่นที่เหมาะกับคุณ...</span>
+
+</div>
+
+
+
+<!-- =====================================================
+     RESULTS
+===================================================== -->
+
+<div class="results" id="results">
 
 
 <div class="results-title">
-
-    กลิ่นที่เราเลือกให้คุณ 💕
-
+กลิ่นที่เราเลือกให้คุณ 💕
 </div>
 
 
 <div class="results-sub">
 
-    เราเลือก 3 กลิ่นที่คิดว่าเหมาะกับคุณที่สุด
-    จากสไตล์และความชอบที่คุณเลือก ✨
+เราเลือก 3 กลิ่นที่คิดว่าเหมาะกับคุณที่สุด
+จากสไตล์และความชอบที่คุณเลือก ✨
 
 </div>
 
 
-<div
-    class="products"
-    id="products">
+<div class="products" id="products">
 
 </div>
 
 
 <div class="email-notice">
 
-    💌 <b>ผลลัพธ์ของคุณพร้อมแล้ว!</b>
+💌 <b>ผลลัพธ์ของคุณพร้อมแล้ว!</b>
 
-    <br>
+<br>
 
-    ระบบได้วิเคราะห์สไตล์
-    และคัดเลือกน้ำหอมที่เหมาะกับคุณที่สุด
-
-    <div class="email">
-        VELOURA PERFUMES ✨
-    </div>
+คุณสามารถดูรายละเอียดน้ำหอม
+และเลือกซื้อน้ำหอมที่ชอบได้ทันที ✨
 
 </div>
 
 
 </div>
 
-
 </div>
-
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer class="footer">
-
-<div class="footer-logo">
-    VELOURA
-</div>
-
-<div class="footer-sub">
-    LUXURY PERFUMES
-</div>
-
-<div class="footer-copy">
-    © 2026 VELOURA PERFUMES
-</div>
-
-</footer>
 
 
 
 <script>
 
-/* =========================================
+/* =====================================================
    PRODUCT DATA
-========================================= */
+===================================================== */
 
-const products = [
+const perfumes = [
 
-    {
-        id: 1,
-        name: "Veloura Essence",
-        price: 59,
-        image: "perfume1.jpg",
-        description:
-            "กลิ่นสดชื่น สะอาด และนุ่มนวล เหมาะสำหรับการใช้งานในทุกวัน",
-        notes: [
-            "สดชื่น",
-            "มัสก์"
-        ]
-    },
+{
+    name: "Veloura Essence",
+    price: 59,
+    image: "images/perfume1.jpg",
+    description: "กลิ่นสดชื่น สะอาด และมีชีวิตชีวา เหมาะกับการใช้ในชีวิตประจำวัน",
+    id: 1
+},
 
-    {
-        id: 2,
-        name: "Veloura Rose",
-        price: 65,
-        image: "perfume2.jpg",
-        description:
-            "กลิ่นดอกไม้แสนละมุน ผสมความหวานของกุหลาบและวานิลลา",
-        notes: [
-            "ดอกไม้",
-            "หวาน",
-            "วานิลลา"
-        ]
-    },
+{
+    name: "Veloura Rose",
+    price: 65,
+    image: "images/perfume2.jpg",
+    description: "กลิ่นดอกไม้หวานละมุน โรแมนติก และมีเสน่ห์",
+    id: 2
+},
 
-    {
-        id: 3,
-        name: "Veloura Noir",
-        price: 69,
-        image: "perfume3.jpg",
-        description:
-            "กลิ่นเข้มลึก สุขุม และน่าค้นหา เหมาะกับช่วงกลางคืน",
-        notes: [
-            "ไม้",
-            "เซ็กซี่",
-            "หรูหรา"
-        ]
-    },
+{
+    name: "Veloura Noir",
+    price: 69,
+    image: "images/perfume3.jpg",
+    description: "กลิ่นเข้มลึก สุขุม เซ็กซี่ และน่าค้นหา",
+    id: 3
+},
 
-    {
-        id: 4,
-        name: "Veloura Bloom",
-        price: 62,
-        image: "perfume4.jpg",
-        description:
-            "กลิ่นดอกไม้สดใส ให้ความรู้สึกสดชื่นและมีชีวิตชีวา",
-        notes: [
-            "สดชื่น",
-            "ดอกไม้"
-        ]
-    },
+{
+    name: "Veloura Bloom",
+    price: 62,
+    image: "images/perfume4.jpg",
+    description: "กลิ่นดอกไม้สดใส ให้ความรู้สึกอ่อนโยนและมีชีวิตชีวา",
+    id: 4
+},
 
-    {
-        id: 5,
-        name: "Crimson Desire",
-        price: 75,
-        image: "perfume5.jpg",
-        description:
-            "กลิ่นหอมเย้ายวนและเซ็กซี่ เหมาะสำหรับค่ำคืนสุดพิเศษ",
-        notes: [
-            "หวาน",
-            "เซ็กซี่",
-            "วานิลลา"
-        ]
-    },
+{
+    name: "Crimson Desire",
+    price: 75,
+    image: "images/perfume5.jpg",
+    description: "กลิ่นเย้ายวน หวาน เซ็กซี่ เหมาะสำหรับค่ำคืนพิเศษ",
+    id: 5
+},
 
-    {
-        id: 6,
-        name: "Midnight Allure",
-        price: 68,
-        image: "perfume6.jpg",
-        description:
-            "กลิ่นหอมเข้มข้น น่าค้นหา และมีเสน่ห์ เหมาะสำหรับกลางคืน",
-        notes: [
-            "หวาน",
-            "เซ็กซี่",
-            "วานิลลา"
-        ]
-    },
+{
+    name: "Midnight Allure",
+    price: 68,
+    image: "images/perfume6.jpg",
+    description: "กลิ่นหวานลึกลับ นุ่มลึก และมีเสน่ห์",
+    id: 6
+},
 
-    {
-        id: 7,
-        name: "Golden Elysium",
-        price: 79,
-        image: "perfume7.jpg",
-        description:
-            "กลิ่นหรูหรา อบอุ่น และดูแพง เหมาะสำหรับโอกาสพิเศษ",
-        notes: [
-            "หรูหรา",
-            "ไม้",
-            "มัสก์"
-        ]
-    },
+{
+    name: "Golden Elysium",
+    price: 79,
+    image: "images/perfume7.jpg",
+    description: "กลิ่นหรูหรา ดูแพง อบอุ่น และโดดเด่น",
+    id: 7
+},
 
-    {
-        id: 8,
-        name: "Veloura Lavender",
-        price: 64,
-        image: "NOIR INTENSE.jpg",
-        description:
-            "กลิ่นละมุน สะอาด และผ่อนคลาย ผสมความหอมของดอกไม้",
-        notes: [
-            "ดอกไม้",
-            "ไม้",
-            "มัสก์"
-        ]
-    }
+{
+    name: "Veloura Lavender",
+    price: 64,
+    image: "images/NOIR%20INTENSE.jpg",
+    description: "กลิ่นนุ่มสะอาด ผ่อนคลาย และมีเอกลักษณ์",
+    id: 8
+}
 
 ];
 
 
-/* =========================================
-   GET FORM
-========================================= */
+/* =====================================================
+   FORM
+===================================================== */
 
-const form =
-    document.getElementById("scentForm");
-
-const results =
-    document.getElementById("results");
-
-const productsContainer =
-    document.getElementById("products");
-
-
-/* =========================================
-   FORM SUBMIT
-========================================= */
-
-form.addEventListener("submit", function(event) {
+document
+.getElementById("scentForm")
+.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
 
-    /* =====================================
-       GET VALUES
-    ===================================== */
+    const favoriteNotes = [];
 
-    const favoriteNotes =
-        Array.from(
-            document.querySelectorAll(
-                'input[name="favorite_notes"]:checked'
-            )
-        ).map(input => input.value);
+    document
+    .querySelectorAll(
+        'input[name="favorite_notes"]:checked'
+    )
+    .forEach(function(input) {
+
+        favoriteNotes.push(input.value);
+
+    });
 
 
     const perfumeTime =
         document.querySelector(
             'input[name="perfume_time"]:checked'
-        ).value;
+        )?.value || "";
 
 
     const weather =
         document.querySelector(
             'input[name="weather"]:checked'
-        ).value;
+        )?.value || "";
 
 
     const budget =
         document.querySelector(
             'input[name="budget"]:checked'
-        ).value;
+        )?.value || "";
 
 
     const buyingStyle =
         document.querySelector(
             'input[name="buying_style"]:checked'
-        ).value;
+        )?.value || "";
 
 
-    /* =====================================
-       CREATE SCORE
-    ===================================== */
+    /* =================================================
+       CHECK
+    ================================================= */
 
-    const scores = {};
+    if (
+        !perfumeTime ||
+        !weather ||
+        !budget ||
+        !buyingStyle
+    ) {
+
+        showMessage(
+            "กรุณาตอบคำถามให้ครบทุกข้อก่อนค้นหากลิ่นนะคะ 💕",
+            "error"
+        );
+
+        return;
+
+    }
 
 
-    products.forEach(product => {
+    /* =================================================
+       LOADING
+    ================================================= */
 
-        scores[product.name] = 0;
+    document.getElementById("loading").style.display =
+        "block";
+
+    document.getElementById("results").style.display =
+        "none";
+
+
+    setTimeout(function() {
+
+        calculateRecommendations(
+            favoriteNotes,
+            perfumeTime,
+            weather,
+            budget,
+            buyingStyle
+        );
+
+        document.getElementById("loading").style.display =
+            "none";
+
+    }, 700);
+
+});
+
+
+/* =====================================================
+   CALCULATE
+===================================================== */
+
+function calculateRecommendations(
+    favoriteNotes,
+    perfumeTime,
+    weather,
+    budget,
+    buyingStyle
+) {
+
+
+    let scores = {};
+
+
+    perfumes.forEach(function(perfume) {
+
+        scores[perfume.name] = 0;
 
     });
 
 
-    /* =====================================
-       FAVORITE NOTES
-    ===================================== */
+    /* =================================================
+       NOTES
+    ================================================= */
 
-    favoriteNotes.forEach(note => {
+    favoriteNotes.forEach(function(note) {
 
         switch(note) {
 
             case "สดชื่น":
 
                 scores["Veloura Essence"] += 5;
-
                 scores["Veloura Bloom"] += 5;
-
                 scores["Golden Elysium"] += 3;
 
                 break;
@@ -1619,9 +1531,7 @@ form.addEventListener("submit", function(event) {
             case "ดอกไม้":
 
                 scores["Veloura Rose"] += 6;
-
                 scores["Veloura Bloom"] += 5;
-
                 scores["Veloura Lavender"] += 4;
 
                 break;
@@ -1630,9 +1540,7 @@ form.addEventListener("submit", function(event) {
             case "หวาน":
 
                 scores["Veloura Rose"] += 5;
-
                 scores["Crimson Desire"] += 6;
-
                 scores["Midnight Allure"] += 5;
 
                 break;
@@ -1641,9 +1549,7 @@ form.addEventListener("submit", function(event) {
             case "ไม้":
 
                 scores["Veloura Noir"] += 6;
-
                 scores["Golden Elysium"] += 5;
-
                 scores["Veloura Lavender"] += 3;
 
                 break;
@@ -1652,9 +1558,7 @@ form.addEventListener("submit", function(event) {
             case "เซ็กซี่":
 
                 scores["Crimson Desire"] += 7;
-
                 scores["Veloura Noir"] += 6;
-
                 scores["Midnight Allure"] += 6;
 
                 break;
@@ -1663,9 +1567,7 @@ form.addEventListener("submit", function(event) {
             case "หรูหรา":
 
                 scores["Golden Elysium"] += 7;
-
                 scores["Veloura Noir"] += 6;
-
                 scores["Midnight Allure"] += 5;
 
                 break;
@@ -1674,9 +1576,7 @@ form.addEventListener("submit", function(event) {
             case "วานิลลา":
 
                 scores["Veloura Rose"] += 4;
-
                 scores["Midnight Allure"] += 6;
-
                 scores["Crimson Desire"] += 5;
 
                 break;
@@ -1685,7 +1585,6 @@ form.addEventListener("submit", function(event) {
             case "มัสก์":
 
                 scores["Veloura Essence"] += 5;
-
                 scores["Golden Elysium"] += 4;
 
                 break;
@@ -1695,18 +1594,16 @@ form.addEventListener("submit", function(event) {
     });
 
 
-    /* =====================================
-       PERFUME TIME
-    ===================================== */
+    /* =================================================
+       TIME
+    ================================================= */
 
     switch(perfumeTime) {
 
         case "กลางวัน":
 
             scores["Veloura Essence"] += 5;
-
             scores["Veloura Bloom"] += 5;
-
             scores["Golden Elysium"] += 2;
 
             break;
@@ -1715,9 +1612,7 @@ form.addEventListener("submit", function(event) {
         case "กลางคืน":
 
             scores["Veloura Noir"] += 5;
-
             scores["Crimson Desire"] += 6;
-
             scores["Midnight Allure"] += 6;
 
             break;
@@ -1726,9 +1621,7 @@ form.addEventListener("submit", function(event) {
         case "ทุกเวลา":
 
             scores["Veloura Essence"] += 3;
-
             scores["Veloura Rose"] += 3;
-
             scores["Golden Elysium"] += 3;
 
             break;
@@ -1736,18 +1629,16 @@ form.addEventListener("submit", function(event) {
     }
 
 
-    /* =====================================
+    /* =================================================
        WEATHER
-    ===================================== */
+    ================================================= */
 
     switch(weather) {
 
         case "ร้อน":
 
             scores["Veloura Essence"] += 5;
-
             scores["Veloura Bloom"] += 5;
-
             scores["Veloura Lavender"] += 3;
 
             break;
@@ -1756,9 +1647,7 @@ form.addEventListener("submit", function(event) {
         case "เย็น":
 
             scores["Veloura Noir"] += 5;
-
             scores["Midnight Allure"] += 5;
-
             scores["Golden Elysium"] += 4;
 
             break;
@@ -1767,9 +1656,7 @@ form.addEventListener("submit", function(event) {
         case "ทุกสภาพอากาศ":
 
             scores["Veloura Essence"] += 3;
-
             scores["Veloura Rose"] += 3;
-
             scores["Golden Elysium"] += 3;
 
             break;
@@ -1777,51 +1664,43 @@ form.addEventListener("submit", function(event) {
     }
 
 
-    /* =====================================
+    /* =================================================
        BUDGET
-    ===================================== */
+    ================================================= */
 
-    if(budget === "ไม่เกิน 60") {
+    if (budget === "ไม่เกิน 60") {
 
         scores["Veloura Essence"] += 5;
 
     }
 
-
-    else if(budget === "61-70") {
+    else if (budget === "61-70") {
 
         scores["Veloura Rose"] += 5;
-
         scores["Veloura Noir"] += 5;
-
         scores["Veloura Bloom"] += 5;
-
         scores["Midnight Allure"] += 5;
-
         scores["Veloura Lavender"] += 5;
 
     }
 
-
-    else if(budget === "71-80") {
+    else if (budget === "71-80") {
 
         scores["Crimson Desire"] += 6;
-
         scores["Golden Elysium"] += 6;
 
     }
 
 
-    /* =====================================
+    /* =================================================
        BUYING STYLE
-    ===================================== */
+    ================================================= */
 
     switch(buyingStyle) {
 
         case "ใช้ทุกวัน":
 
             scores["Veloura Essence"] += 5;
-
             scores["Veloura Bloom"] += 5;
 
             break;
@@ -1830,7 +1709,6 @@ form.addEventListener("submit", function(event) {
         case "ออกเดท":
 
             scores["Crimson Desire"] += 7;
-
             scores["Midnight Allure"] += 6;
 
             break;
@@ -1839,9 +1717,7 @@ form.addEventListener("submit", function(event) {
         case "ทำงาน":
 
             scores["Veloura Rose"] += 4;
-
             scores["Golden Elysium"] += 5;
-
             scores["Veloura Essence"] += 4;
 
             break;
@@ -1850,7 +1726,6 @@ form.addEventListener("submit", function(event) {
         case "ปาร์ตี้":
 
             scores["Veloura Noir"] += 6;
-
             scores["Crimson Desire"] += 7;
 
             break;
@@ -1859,7 +1734,6 @@ form.addEventListener("submit", function(event) {
         case "โอกาสพิเศษ":
 
             scores["Golden Elysium"] += 7;
-
             scores["Veloura Noir"] += 6;
 
             break;
@@ -1867,42 +1741,60 @@ form.addEventListener("submit", function(event) {
     }
 
 
-    /* =====================================
+    /* =================================================
        SORT
-    ===================================== */
+    ================================================= */
 
-    const sortedProducts =
-        [...products].sort(function(a,b) {
+    const sortedNames =
+        Object.keys(scores).sort(function(a,b) {
 
-            return scores[b.name] - scores[a.name];
+            return scores[b] - scores[a];
 
         });
 
 
-    /* =====================================
+    /* =================================================
        TOP 3
-    ===================================== */
+    ================================================= */
 
-    const topProducts =
-        sortedProducts.slice(0,3);
+    const topNames =
+        sortedNames.slice(0,3);
 
 
-    /* =====================================
-       DISPLAY
-    ===================================== */
+    const recommendations =
+        topNames.map(function(name) {
+
+            return perfumes.find(function(perfume) {
+
+                return perfume.name === name;
+
+            });
+
+        });
+
+
+    displayResults(recommendations);
+
+}
+
+
+/* =====================================================
+   DISPLAY RESULTS
+===================================================== */
+
+function displayResults(products) {
+
+    const productsContainer =
+        document.getElementById("products");
+
 
     productsContainer.innerHTML = "";
 
 
-    topProducts.forEach(function(product,index) {
-
-        const score =
-            scores[product.name];
-
+    products.forEach(function(product,index) {
 
         const card =
             document.createElement("div");
-
 
         card.className = "product";
 
@@ -1910,7 +1802,7 @@ form.addEventListener("submit", function(event) {
         card.innerHTML = `
 
             <img
-                src="images/${product.image}"
+                src="${product.image}"
                 class="product-img"
                 alt="${product.name}"
                 onerror="this.src='images/perfume1.jpg';"
@@ -1947,8 +1839,9 @@ form.addEventListener("submit", function(event) {
 
 
                 <a
-                    href="product_detail.php?id=${product.id}"
-                    class="view-product">
+                    href="product_detail.html?id=${product.id}"
+                    class="view-product"
+                >
 
                     ดูสินค้า ✨
 
@@ -1964,23 +1857,46 @@ form.addEventListener("submit", function(event) {
     });
 
 
-    /* =====================================
-       SHOW RESULT
-    ===================================== */
-
-    results.classList.add("show");
+    document.getElementById("results").style.display =
+        "block";
 
 
-    setTimeout(function() {
+    showMessage(
+        "✨ วิเคราะห์เสร็จแล้ว! เราพบกลิ่นที่เหมาะกับคุณ 3 กลิ่น",
+        "success"
+    );
 
-        results.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
 
-    },100);
+    document.getElementById("results")
+    .scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
-});
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+function showMessage(text,type) {
+
+    const message =
+        document.getElementById("message");
+
+
+    message.textContent = text;
+
+
+    message.className =
+        "message " + type;
+
+
+    message.style.display =
+        "block";
+
+}
 
 </script>
 
