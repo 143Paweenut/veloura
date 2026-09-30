@@ -1,82 +1,3412 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veloura Perfumes | Luxury Fragrance</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"Noto Sans Thai","Montserrat",sans-serif;background:#fff9fb;color:#30272a;overflow-x:hidden}a{text-decoration:none;color:inherit}
-.top-bar{min-height:38px;background:linear-gradient(90deg,#251b1f,#4a3039,#251b1f);color:#fff1f5;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:2px;text-align:center;padding:5px}
-nav{min-height:86px;background:rgba(255,250,252,.94);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid #efdde3;position:sticky;top:0;z-index:1000;box-shadow:0 8px 30px rgba(109,66,81,.06)}
-.logo{text-align:center;line-height:1;color:#30272a;min-width:190px;position:relative}.logo:before,.logo:after{content:"✦";position:absolute;color:#d28da2;font-size:10px;top:3px}.logo:before{left:0}.logo:after{right:0}.logo-main{display:block;font:600 35px "Cormorant Garamond";letter-spacing:7px}.logo-sub{display:block;font:8px "Montserrat";letter-spacing:6px;margin-top:8px;color:#b37c91}
-.nav-links{display:flex;align-items:center;gap:27px}.nav-links a,.nav-right a{font-size:12px;color:#62545a;transition:.3s;position:relative}.nav-links a:after{content:"";position:absolute;left:50%;bottom:-10px;width:0;height:1px;background:#c9879c;transition:.3s;transform:translateX(-50%)}.nav-links a:hover,.nav-links a.active,.nav-right a:hover{color:#b36e85}.nav-links a:hover:after,.nav-links a.active:after{width:70%}.nav-right{display:flex;align-items:center;gap:20px}.cart{position:relative}.cart-count{position:absolute;top:-10px;right:-13px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#d996aa,#b96f89);color:#fff;font:10px "Montserrat";display:flex;align-items:center;justify-content:center}
-.hero{min-height:680px;display:grid;grid-template-columns:58% 42%;overflow:hidden;background:linear-gradient(135deg,#f5e4e8,#f8eef1 55%,#f0dce2)}.hero-image{min-height:680px;overflow:hidden;position:relative}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(246,226,232,.82))}.hero-image img{width:100%;height:100%;object-fit:cover;display:block;transition:1.2s}.hero:hover .hero-image img{transform:scale(1.025)}.hero-content{display:flex;flex-direction:column;justify-content:center;padding:70px 10%}.eyebrow,.ad-kicker,.newsletter-cta-kicker,.story-kicker{font:600 9px "Montserrat";letter-spacing:4px;color:#b36e85;margin-bottom:18px}.hero h1{font:500 clamp(50px,5vw,78px)/.88 "Cormorant Garamond";margin-bottom:20px}.hero h1 em,.ad-content h2 em,.ad-new-content h2 em,.newsletter-cta-content h2 em{color:#b66f86;font-style:normal;font-weight:400}.hero-line{width:80px;height:2px;background:linear-gradient(90deg,#c7859a,#eed2da);margin:5px 0 22px}.hero-description{font-size:13px;line-height:2;color:#786b71;max-width:390px;margin-bottom:32px}.shop-button,.ad-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:max-content;padding:14px 20px;background:#34282d;color:#fff;font:600 9px "Montserrat";letter-spacing:1.8px;transition:.3s;box-shadow:0 12px 25px rgba(52,40,45,.18)}.shop-button{width:200px}.shop-button:hover,.ad-button:hover{background:#a9667d;transform:translateY(-3px)}.hero-note{margin-top:25px;font-size:9px;letter-spacing:1.5px;color:#9b858d}
-.intro{text-align:center;padding:82px 20px 52px;background:#fff}.intro-kicker{font:500 9px "Montserrat";letter-spacing:4px;color:#bd7d91;margin-bottom:15px}.intro h2{font:500 47px "Cormorant Garamond";margin-bottom:13px}.intro h2:after{content:"  ✦";color:#d596aa;font-size:17px}.intro p{font-size:12px;color:#95868d}.collection{background:#fff;padding:25px 7% 100px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1120px;margin:auto}.product{position:relative;transition:.35s}.product:hover{transform:translateY(-7px)}.product-image{aspect-ratio:4/5;background:#f7eef1;overflow:hidden;position:relative;box-shadow:0 12px 28px rgba(95,57,70,.08)}.product-image img{width:100%;height:100%;object-fit:cover;display:block;transition:.7s}.product:hover img{transform:scale(1.065)}.product-tag{position:absolute;top:14px;left:14px;background:rgba(255,248,250,.92);padding:7px 11px;font:500 8px "Montserrat";letter-spacing:1.5px;color:#8c5d6d;z-index:2;border:1px solid #f0d6de}.product-info{padding:18px 4px}.product-info h3{font:600 24px "Cormorant Garamond";letter-spacing:1px;margin-bottom:4px}.product-info p{font-size:10px;color:#998a91;margin-bottom:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.product-bottom{display:flex;justify-content:space-between;align-items:center}.product-price{font:500 12px "Montserrat";color:#8e6070}.view-product{font:500 9px "Montserrat";color:#b16d83}
-.newsletter-cta-section{padding:75px 20px 85px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(255,220,230,.65),transparent 42%),linear-gradient(135deg,#fff8fa,#f8e9ee 52%,#fff);border-block:1px solid #f1dce3}.newsletter-cta-content{max-width:620px;margin:auto}.newsletter-cta-content h2{font:500 clamp(40px,5vw,57px)/.95 "Cormorant Garamond";margin-bottom:14px}.newsletter-cta-content p{max-width:470px;margin:0 auto 27px;color:#83747b;font-size:11px;line-height:2}.newsletter-main-button{display:inline-flex;align-items:center;gap:15px;min-width:330px;padding:15px 19px;text-align:left;background:linear-gradient(120deg,#30272a,#60424d,#30272a);color:#fff;box-shadow:0 15px 35px rgba(62,40,49,.2)}.button-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.28);border-radius:50%;color:#e8b6c5}.newsletter-main-button strong{display:block;font-size:12px}.newsletter-main-button small{display:block;color:#cdbdc3;font:7px "Montserrat";letter-spacing:2px}.button-arrow{margin-left:auto}.newsletter-cta-note{margin-top:15px;color:#a48d96;font-size:8px}
-.story{background:linear-gradient(135deg,#30272a,#443038 60%,#33272c);color:#fff;display:grid;grid-template-columns:1fr 1fr;min-height:370px}.story-content{padding:75px 12%;display:flex;flex-direction:column;justify-content:center}.story h2{font:500 45px/1 "Cormorant Garamond";margin-bottom:20px}.story p{font-size:12px;line-height:2;color:#d4c5ca;max-width:460px}.story-mark{display:flex;align-items:center;justify-content:center;font:500 120px "Cormorant Garamond";color:#b87b8e;border-left:1px solid rgba(255,255,255,.09)}
-footer{background:#20191c;color:#fff;padding:58px 7% 25px}footer:before{content:"✦  ✧  ⋆  ✦  ✧";display:block;text-align:center;color:#bd8093;letter-spacing:16px;margin-bottom:35px}.footer-container{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;max-width:1120px;margin:auto}.footer-logo{font:600 31px "Cormorant Garamond";letter-spacing:6px;margin-bottom:12px}footer p,footer a{font-size:11px;line-height:2;color:#aaa0a4}footer h3{font-size:12px;margin-bottom:18px;color:#f0dbe2}footer a{display:block;margin-bottom:7px}.copyright{text-align:center;border-top:1px solid #3b3034;margin-top:45px;padding-top:20px;color:#777075;font-size:10px}
-/* Popup */.veloura-ad-overlay{position:fixed;inset:0;z-index:20000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(36,25,30,.48);backdrop-filter:blur(7px)}.veloura-ad-box{width:min(850px,100%);min-height:440px;position:relative;overflow:hidden;background:#fff8fa;border:1px solid rgba(213,145,164,.55);box-shadow:0 35px 100px rgba(30,20,25,.35)}.veloura-ad-slider{min-height:440px;position:relative}.veloura-ad-slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:0;visibility:hidden;transform:translateX(20px);transition:.45s}.veloura-ad-slide.active{opacity:1;visibility:visible;transform:translateX(0)}.veloura-ad-close{position:absolute;z-index:20;top:15px;right:15px;width:38px;height:38px;border-radius:50%;border:1px solid #e4cbd4;background:#fff;color:#5c4b52;cursor:pointer}.ad-store-image,.ad-new-image{min-height:440px;overflow:hidden}.ad-store-image img,.ad-new-image img{width:100%;height:100%;object-fit:cover;display:block}.ad-content,.ad-new-content{padding:55px;display:flex;flex-direction:column;justify-content:center}.ad-content h2,.ad-new-content h2{font:500 52px/.9 "Cormorant Garamond";margin-bottom:20px}.ad-content p,.ad-new-description{font-size:12px;line-height:2;color:#786b71;margin-bottom:25px}.ad-promotion{background:linear-gradient(135deg,#38282f,#62404d);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}.ad-promotion-content{padding:50px 30px}.ad-promotion h2{font:500 60px/.9 "Cormorant Garamond";margin-bottom:10px}.ad-promotion .ad-kicker{color:#e5b4c2}.promo-big{font:600 25px "Montserrat";letter-spacing:2px;margin-bottom:12px}.promo-detail{color:#d8c6cd;font-size:11px;line-height:2;max-width:440px;margin:0 auto 25px}.promo-code{display:inline-block;padding:9px 20px;border:1px solid rgba(232,185,199,.55);color:#f0c8d4;font:600 10px "Montserrat";letter-spacing:2px;margin-bottom:25px}.ad-promotion .ad-button{background:#f0c7d3;color:#3b2b31;margin:auto}.ad-new-product{display:grid;grid-template-columns:45% 55%;background:#fff8fa}.new-label{position:absolute;top:22px;left:22px;z-index:4;padding:8px 12px;background:#fff;border:1px solid #e5c9d2;color:#9a6174;font:600 8px "Montserrat";letter-spacing:1.7px}.ad-new-image{position:relative;background:#f3e1e7}.ad-new-content h2{font-size:48px}.ad-new-name{font:600 27px "Cormorant Garamond";color:#b16d83;margin-bottom:10px}.ad-new-description{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.ad-new-price{font:600 14px "Montserrat";color:#8e6070;letter-spacing:1px;margin-bottom:22px}.ad-controls{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:30;display:flex;gap:7px}.ad-dot{width:8px;height:8px;border:0;border-radius:50%;background:#d9b7c2;cursor:pointer}.ad-dot.active{width:24px;border-radius:10px;background:#a9677d}.ad-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:25;width:38px;height:38px;border-radius:50%;border:1px solid #dfc5cd;background:#fff;color:#725963;cursor:pointer}.ad-prev{left:15px}.ad-next{right:15px}.ad-progress{position:absolute;left:0;bottom:0;height:3px;width:33.333%;background:#c37d93;z-index:40}
-@media(max-width:800px){nav{padding:18px 20px;flex-wrap:wrap;justify-content:center;gap:16px}.logo{width:100%;order:-1}.nav-links{flex-wrap:wrap;justify-content:center;gap:14px}.nav-right{position:static}.hero{grid-template-columns:1fr}.hero-image{min-height:430px}.hero-content{text-align:center;align-items:center;min-height:500px}.hero-line{margin-inline:auto}.products{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr}.story-mark{display:none}.veloura-ad-slide{grid-template-columns:1fr;overflow-y:auto}.ad-store-image,.ad-new-image{min-height:220px;height:220px}.ad-content,.ad-new-content{padding:30px 28px 65px;min-height:280px}.ad-promotion{min-height:500px}.ad-new-product{grid-template-columns:1fr}}
-@media(max-width:550px){.top-bar{font-size:8px}.hero-image{min-height:330px}.hero h1{font-size:50px}.intro h2{font-size:38px}.collection{padding-inline:20px}.products{grid-template-columns:1fr;max-width:360px}.footer-container{grid-template-columns:1fr;gap:30px}.veloura-ad-overlay{padding:12px}.veloura-ad-box,.veloura-ad-slider{min-height:540px}.ad-promotion{min-height:540px}.ad-promotion h2{font-size:43px}.ad-content h2,.ad-new-content h2{font-size:40px}.newsletter-main-button{min-width:280px}}
-</style>
+
+    <!-- =====================================================
+         META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Veloura Perfumes | Luxury Fragrance</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Noto Sans Thai",
+                "Montserrat",
+                sans-serif;
+
+            background: #fff9fb;
+            color: #30272a;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           FLOATING SPARKLES
+        ====================================================== */
+
+        .sparkles {
+            position: fixed;
+            inset: 0;
+
+            pointer-events: none;
+            z-index: 9999;
+
+            overflow: hidden;
+        }
+
+        .sparkles span {
+            position: absolute;
+
+            color: #d89caf;
+            opacity: 0;
+
+            animation:
+                twinkle 3.8s ease-in-out infinite;
+        }
+
+        .sparkles span:nth-child(1) {
+            left: 5%;
+            top: 18%;
+            font-size: 16px;
+            animation-delay: .2s;
+        }
+
+        .sparkles span:nth-child(2) {
+            left: 15%;
+            top: 72%;
+            font-size: 10px;
+            animation-delay: 1.4s;
+        }
+
+        .sparkles span:nth-child(3) {
+            left: 27%;
+            top: 31%;
+            font-size: 13px;
+            animation-delay: 2s;
+        }
+
+        .sparkles span:nth-child(4) {
+            left: 41%;
+            top: 83%;
+            font-size: 18px;
+            animation-delay: .8s;
+        }
+
+        .sparkles span:nth-child(5) {
+            left: 56%;
+            top: 20%;
+            font-size: 11px;
+            animation-delay: 2.7s;
+        }
+
+        .sparkles span:nth-child(6) {
+            left: 69%;
+            top: 68%;
+            font-size: 16px;
+            animation-delay: 1.1s;
+        }
+
+        .sparkles span:nth-child(7) {
+            left: 81%;
+            top: 27%;
+            font-size: 12px;
+            animation-delay: 2.4s;
+        }
+
+        .sparkles span:nth-child(8) {
+            left: 94%;
+            top: 78%;
+            font-size: 17px;
+            animation-delay: .5s;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(.4) rotate(0);
+            }
+
+            35%,
+            65% {
+                opacity: .75;
+                transform: scale(1.1) rotate(25deg);
+            }
+
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ====================================================== */
+
+        .top-bar {
+            min-height: 38px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #251b1f,
+                    #4a3039,
+                    #251b1f
+                );
+
+            color: #fff1f5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 10px;
+            letter-spacing: 2px;
+
+            position: relative;
+            overflow: hidden;
+
+            text-align: center;
+            padding: 5px;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
+
+        nav {
+            min-height: 86px;
+
+            background: rgba(255, 250, 252, .94);
+
+            backdrop-filter: blur(16px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            border-bottom: 1px solid #efdde3;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 8px 30px rgba(109, 66, 81, .06);
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            text-align: center;
+            line-height: 1;
+
+            color: #30272a;
+
+            min-width: 190px;
+
+            position: relative;
+        }
+
+        .logo:before,
+        .logo:after {
+            content: "✦";
+
+            position: absolute;
+
+            color: #d28da2;
+            font-size: 10px;
+            top: 3px;
+        }
+
+        .logo:before {
+            left: 0;
+        }
+
+        .logo:after {
+            right: 0;
+        }
+
+        .logo-main {
+            display: block;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 35px;
+            font-weight: 600;
+
+            letter-spacing: 7px;
+        }
+
+        .logo-sub {
+            display: block;
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 8px;
+            letter-spacing: 6px;
+
+            margin-top: 8px;
+
+            color: #b37c91;
+        }
+
+
+        /* NAV LINKS */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 27px;
+        }
+
+        .nav-links a,
+        .nav-right a {
+            font-size: 12px;
+            color: #62545a;
+
+            transition: .3s;
+
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            bottom: -10px;
+
+            width: 0;
+            height: 1px;
+
+            background: #c9879c;
+
+            transition: .3s;
+
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active,
+        .nav-right a:hover {
+            color: #b36e85;
+        }
+
+        .nav-links a:hover:after,
+        .nav-links a.active:after {
+            width: 70%;
+        }
+
+
+        /* RIGHT NAV */
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        /* CART */
+
+        .cart {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+
+            top: -10px;
+            right: -13px;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d996aa,
+                    #b96f89
+                );
+
+            color: #fff;
+
+            font: 10px "Montserrat";
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 4px 10px rgba(185, 111, 137, .3);
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+            min-height: 680px;
+
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns: 58% 42%;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5e4e8,
+                    #f8eef1 55%,
+                    #f0dce2
+                );
+        }
+
+        .hero-image {
+            position: relative;
+
+            min-height: 680px;
+
+            overflow: hidden;
+        }
+
+        .hero-image:after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent 55%,
+                    rgba(246, 226, 232, .82)
+                );
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 1.2s ease;
+        }
+
+        .hero:hover .hero-image img {
+            transform: scale(1.025);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 70px 10%;
+        }
+
+        .eyebrow {
+            font:
+                500 10px
+                "Montserrat";
+
+            letter-spacing: 4px;
+
+            color: #b36e85;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font:
+                500 clamp(50px, 5vw, 78px) / .88
+                "Cormorant Garamond",
+                serif;
+
+            color: #33282c;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 em {
+            font-weight: 400;
+            color: #b66f86;
+        }
+
+        .hero-line {
+            width: 80px;
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #c7859a,
+                    #eed2da
+                );
+
+            margin: 5px 0 22px;
+        }
+
+        .hero-description {
+            font-size: 13px;
+            line-height: 2;
+
+            color: #786b71;
+
+            max-width: 390px;
+
+            margin-bottom: 32px;
+        }
+
+        .shop-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 200px;
+
+            padding: 15px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #30272a,
+                    #50353e
+                );
+
+            color: #fff;
+
+            font:
+                500 10px
+                "Montserrat";
+
+            letter-spacing: 2px;
+
+            transition: .35s;
+
+            box-shadow:
+                0 12px 28px rgba(63, 42, 50, .16);
+        }
+
+        .shop-button i {
+            margin-left: 12px;
+            font-size: 9px;
+        }
+
+        .shop-button:hover {
+            background:
+                linear-gradient(
+                    135deg,
+                    #c47e94,
+                    #a96178
+                );
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 30px rgba(169, 97, 120, .25);
+        }
+
+        .hero-note {
+            margin-top: 25px;
+
+            font-size: 9px;
+
+            letter-spacing: 1.5px;
+
+            color: #9b858d;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .intro {
+            text-align: center;
+
+            padding: 82px 20px 52px;
+
+            background: #fff;
+        }
+
+        .intro-kicker {
+            font:
+                500 9px
+                "Montserrat";
+
+            letter-spacing: 4px;
+
+            color: #bd7d91;
+
+            margin-bottom: 15px;
+        }
+
+        .intro h2 {
+            font:
+                500 47px
+                "Cormorant Garamond",
+                serif;
+
+            color: #352a2e;
+
+            margin-bottom: 13px;
+        }
+
+        .intro h2:after {
+            content: "  ✦";
+
+            color: #d596aa;
+
+            font-size: 17px;
+        }
+
+        .intro p {
+            font-size: 12px;
+
+            color: #95868d;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           PRODUCTS
+        ====================================================== */
+
+        .collection {
+            background: #fff;
+
+            padding: 25px 7% 100px;
+        }
+
+        .products {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+
+            max-width: 1120px;
+
+            margin: auto;
+        }
+
+        .product {
+            display: block;
+
+            position: relative;
+
+            transition: .35s;
+
+            padding-bottom: 5px;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+        }
+
+        .product-image {
+            aspect-ratio: 4 / 5;
+
+            background: #f7eef1;
+
+            overflow: hidden;
+
+            position: relative;
+
+            box-shadow:
+                0 12px 28px
+                rgba(95, 57, 70, .08);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform .7s ease;
+        }
+
+        .product:hover
+        .product-image img {
+            transform: scale(1.065);
+        }
+
+        .product-tag {
+            position: absolute;
+
+            top: 14px;
+            left: 14px;
+
+            background:
+                rgba(255, 248, 250, .92);
+
+            padding: 7px 11px;
+
+            font:
+                500 8px
+                "Montserrat";
+
+            letter-spacing: 1.5px;
+
+            color: #8c5d6d;
+
+            z-index: 4;
+
+            border:
+                1px solid #f0d6de;
+        }
+
+        .product-info {
+            padding: 18px 4px 0;
+        }
+
+        .product-info h3 {
+            font:
+                600 24px
+                "Cormorant Garamond",
+                serif;
+
+            letter-spacing: 1px;
+
+            color: #352a2e;
+
+            margin-bottom: 4px;
+        }
+
+        .product-info p {
+            font-size: 10px;
+
+            color: #998a91;
+
+            margin-bottom: 10px;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+        }
+
+        .product-bottom {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font:
+                500 12px
+                "Montserrat";
+
+            letter-spacing: 1px;
+
+            color: #8e6070;
+        }
+
+        .view-product {
+            font:
+                500 9px
+                "Montserrat";
+
+            letter-spacing: 1px;
+
+            color: #b16d83;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter-cta-section {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 75px 20px 85px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(255, 220, 230, .65),
+                    transparent 42%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff8fa,
+                    #f8e9ee 52%,
+                    #fff
+                );
+
+            border-top:
+                1px solid #f1dce3;
+
+            border-bottom:
+                1px solid #f1dce3;
+
+            text-align: center;
+        }
+
+        .newsletter-cta-decoration {
+            color: #c9859a;
+
+            font-size: 12px;
+
+            letter-spacing: 7px;
+
+            margin-bottom: 17px;
+        }
+
+        .newsletter-cta-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 620px;
+
+            margin: auto;
+        }
+
+        .newsletter-cta-kicker {
+            font:
+                600 9px
+                "Montserrat";
+
+            letter-spacing: 4px;
+
+            color: #b36e85;
+
+            margin-bottom: 12px;
+        }
+
+        .newsletter-cta-content h2 {
+            font:
+                500 clamp(40px, 5vw, 57px) / .95
+                "Cormorant Garamond",
+                serif;
+
+            color: #352a2e;
+
+            margin-bottom: 14px;
+        }
+
+        .newsletter-cta-content h2 em {
+            color: #b66f86;
+
+            font-style: normal;
+
+            font-weight: 400;
+        }
+
+        .newsletter-cta-content p {
+            max-width: 470px;
+
+            margin: 0 auto 27px;
+
+            color: #83747b;
+
+            font-size: 11px;
+
+            line-height: 2;
+        }
+
+        .newsletter-main-button {
+            position: relative;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            min-width: 330px;
+
+            padding: 15px 19px;
+
+            text-align: left;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #30272a,
+                    #60424d,
+                    #30272a
+                );
+
+            color: #fff;
+
+            box-shadow:
+                0 15px 35px
+                rgba(62, 40, 49, .2);
+
+            transition: .4s;
+        }
+
+        .newsletter-main-button:hover {
+            transform: translateY(-4px);
+        }
+
+        .button-icon {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, .28);
+
+            background:
+                rgba(255, 255, 255, .08);
+
+            border-radius: 50%;
+
+            color: #e8b6c5;
+
+            font-size: 13px;
+
+            flex: none;
+        }
+
+        .newsletter-main-button strong {
+            display: block;
+
+            font:
+                500 12px
+                "Noto Sans Thai",
+                "Montserrat",
+                sans-serif;
+        }
+
+        .newsletter-main-button small {
+            display: block;
+
+            margin-top: 3px;
+
+            color: #cdbdc3;
+
+            font:
+                500 7px
+                "Montserrat";
+
+            letter-spacing: 2px;
+        }
+
+        .button-arrow {
+            margin-left: auto;
+
+            color: #e3aebe;
+
+            font-size: 10px;
+        }
+
+        .newsletter-cta-note {
+            margin-top: 15px;
+
+            color: #a48d96;
+
+            font-size: 8px;
+
+            letter-spacing: .6px;
+        }
+
+
+        /* =====================================================
+           STORY
+        ====================================================== */
+
+        .story {
+            background:
+                linear-gradient(
+                    135deg,
+                    #30272a,
+                    #443038 60%,
+                    #33272c
+                );
+
+            color: #fff;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            min-height: 370px;
+        }
+
+        .story-content {
+            padding: 75px 12%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .story-kicker {
+            font:
+                500 9px
+                "Montserrat";
+
+            letter-spacing: 4px;
+
+            color: #d59aac;
+
+            margin-bottom: 15px;
+        }
+
+        .story h2 {
+            font:
+                500 45px / 1
+                "Cormorant Garamond",
+                serif;
+
+            margin-bottom: 20px;
+        }
+
+        .story p {
+            font-size: 12px;
+
+            line-height: 2;
+
+            color: #d4c5ca;
+
+            max-width: 460px;
+        }
+
+        .story-mark {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font:
+                500 120px
+                "Cormorant Garamond";
+
+            color: #b87b8e;
+
+            border-left:
+                1px solid
+                rgba(255, 255, 255, .09);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            background: #20191c;
+
+            color: #fff;
+
+            padding: 58px 7% 25px;
+        }
+
+        footer:before {
+            content: "✦  ✧  ⋆  ✦  ✧";
+
+            display: block;
+
+            text-align: center;
+
+            color: #bd8093;
+
+            letter-spacing: 16px;
+
+            font-size: 12px;
+
+            margin-bottom: 35px;
+        }
+
+        .footer-container {
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap: 60px;
+
+            max-width: 1120px;
+
+            margin: auto;
+        }
+
+        .footer-logo {
+            font:
+                600 31px
+                "Cormorant Garamond";
+
+            letter-spacing: 6px;
+
+            margin-bottom: 12px;
+        }
+
+        footer p,
+        footer a {
+            font-size: 11px;
+
+            line-height: 2;
+
+            color: #aaa0a4;
+        }
+
+        footer h3 {
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+
+            color: #f0dbe2;
+        }
+
+        footer a {
+            display: block;
+
+            margin-bottom: 7px;
+
+            transition: .2s;
+        }
+
+        footer a:hover {
+            color: #e0a1b3;
+
+            transform: translateX(3px);
+        }
+
+        .copyright {
+            text-align: center;
+
+            border-top:
+                1px solid #3b3034;
+
+            margin-top: 45px;
+
+            padding-top: 20px;
+
+            color: #777075;
+
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           ADVERTISEMENT POPUP
+        ====================================================== */
+
+        .veloura-ad-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 20000;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            background:
+                rgba(36, 25, 30, .48);
+
+            backdrop-filter: blur(7px);
+
+            animation:
+                adOverlayIn .35s ease;
+        }
+
+        .veloura-ad-box {
+            width: min(850px, 100%);
+
+            min-height: 440px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #fff8fa;
+
+            border:
+                1px solid
+                rgba(213, 145, 164, .55);
+
+            box-shadow:
+                0 35px 100px
+                rgba(30, 20, 25, .35),
+
+                0 5px 20px
+                rgba(120, 70, 90, .12);
+
+            animation:
+                adBoxIn .45s ease;
+        }
+
+        .veloura-ad-slider {
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 440px;
+
+            position: relative;
+        }
+
+        .veloura-ad-slide {
+            position: absolute;
+
+            inset: 0;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform:
+                translateX(20px);
+
+            transition:
+                opacity .45s ease,
+                transform .45s ease,
+                visibility .45s ease;
+        }
+
+        .veloura-ad-slide.active {
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translateX(0);
+        }
+
+
+        /* =====================================================
+           CLOSE BUTTON
+        ====================================================== */
+
+        .veloura-ad-close {
+            position: absolute;
+
+            z-index: 20;
+
+            top: 15px;
+            right: 15px;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid #e4cbd4;
+
+            background:
+                rgba(255, 255, 255, .88);
+
+            color: #5c4b52;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .veloura-ad-close:hover {
+            background: #35282d;
+
+            color: #fff;
+
+            transform: rotate(90deg);
+        }
+
+
+        /* =====================================================
+           AD 1
+        ====================================================== */
+
+        .ad-store-image {
+            position: relative;
+
+            min-height: 440px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e7c3cd,
+                    #f7e7ec
+                );
+        }
+
+        .ad-store-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 1s;
+        }
+
+        .veloura-ad-slide.active
+        .ad-store-image img {
+            transform: scale(1.04);
+        }
+
+        .ad-content {
+            padding: 65px 55px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(255, 255, 255, .9),
+                    transparent 30%
+                ),
+                #fff8fa;
+        }
+
+        .ad-kicker {
+            font:
+                600 9px
+                "Montserrat";
+
+            letter-spacing: 4px;
+
+            color: #b36e85;
+
+            margin-bottom: 18px;
+        }
+
+        .ad-content h2 {
+            font:
+                500 52px / .9
+                "Cormorant Garamond",
+                serif;
+
+            color: #352a2e;
+
+            margin-bottom: 20px;
+        }
+
+        .ad-content h2 em {
+            color: #b66f86;
+
+            font-style: normal;
+
+            font-weight: 400;
+        }
+
+        .ad-content p {
+            font-size: 12px;
+
+            line-height: 2;
+
+            color: #786b71;
+
+            max-width: 340px;
+
+            margin-bottom: 25px;
+        }
+
+        .ad-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            width: max-content;
+
+            min-width: 180px;
+
+            padding: 14px 20px;
+
+            background: #34282d;
+
+            color: #fff;
+
+            font:
+                600 9px
+                "Montserrat";
+
+            letter-spacing: 1.8px;
+
+            transition: .3s;
+
+            box-shadow:
+                0 12px 25px
+                rgba(52, 40, 45, .18);
+        }
+
+        .ad-button:hover {
+            background: #a9667d;
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           AD 2 - PROMOTION
+        ====================================================== */
+
+        .ad-promotion {
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(255, 255, 255, .25),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #38282f,
+                    #62404d
+                );
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .ad-promotion:before {
+            content: "✦  ✧  ⋆  ✦  ✧";
+
+            position: absolute;
+
+            top: 45px;
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            color: #e1aabd;
+
+            letter-spacing: 12px;
+
+            font-size: 13px;
+
+            opacity: .8;
+        }
+
+        .ad-promotion-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 50px 30px;
+        }
+
+        .ad-promotion .ad-kicker {
+            color: #e5b4c2;
+
+            margin-bottom: 12px;
+        }
+
+        .ad-promotion h2 {
+            color: #fff;
+
+            font:
+                500 60px / .9
+                "Cormorant Garamond",
+                serif;
+
+            margin-bottom: 10px;
+        }
+
+        .ad-promotion h2 em {
+            color: #e6afc0;
+        }
+
+        .promo-big {
+            font:
+                600 25px
+                "Montserrat";
+
+            letter-spacing: 2px;
+
+            color: #fff;
+
+            margin-bottom: 12px;
+        }
+
+        .promo-detail {
+            color: #d8c6cd;
+
+            font-size: 11px;
+
+            line-height: 2;
+
+            margin:
+                0 auto 25px;
+
+            max-width: 440px;
+        }
+
+        .promo-code {
+            display: inline-block;
+
+            padding: 9px 20px;
+
+            border:
+                1px solid
+                rgba(232, 185, 199, .55);
+
+            color: #f0c8d4;
+
+            font:
+                600 10px
+                "Montserrat";
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        .ad-promotion .ad-button {
+            background: #f0c7d3;
+
+            color: #3b2b31;
+
+            margin: auto;
+        }
+
+        .ad-promotion
+        .ad-button:hover {
+            background: #fff;
+        }
+
+
+        /* =====================================================
+           AD 3 - NEW PRODUCT
+        ====================================================== */
+
+        .ad-new-product {
+            display: grid;
+
+            grid-template-columns:
+                45% 55%;
+
+            background: #fff8fa;
+        }
+
+        .ad-new-image {
+            position: relative;
+
+            min-height: 440px;
+
+            overflow: hidden;
+
+            background: #f3e1e7;
+        }
+
+        .ad-new-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 1s;
+        }
+
+        .veloura-ad-slide.active
+        .ad-new-image img {
+            transform: scale(1.035);
+        }
+
+        .new-label {
+            position: absolute;
+
+            top: 22px;
+            left: 22px;
+
+            z-index: 4;
+
+            padding: 8px 12px;
+
+            background:
+                rgba(255, 248, 250, .94);
+
+            border:
+                1px solid #e5c9d2;
+
+            color: #9a6174;
+
+            font:
+                600 8px
+                "Montserrat";
+
+            letter-spacing: 1.7px;
+        }
+
+        .ad-new-content {
+            padding: 55px 48px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .ad-new-content h2 {
+            font:
+                500 48px / .95
+                "Cormorant Garamond",
+                serif;
+
+            margin-bottom: 10px;
+        }
+
+        .ad-new-content h2 em {
+            color: #b66f86;
+
+            font-style: normal;
+
+            font-weight: 400;
+        }
+
+        .ad-new-name {
+            font:
+                600 27px
+                "Cormorant Garamond",
+                serif;
+
+            color: #b16d83;
+
+            margin-bottom: 10px;
+        }
+
+        .ad-new-description {
+            color: #796c72;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+
+            margin-bottom: 17px;
+
+            display: -webkit-box;
+
+            -webkit-line-clamp: 3;
+
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+        }
+
+        .ad-new-price {
+            font:
+                600 14px
+                "Montserrat";
+
+            color: #8e6070;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =====================================================
+           AD CONTROLS
+        ====================================================== */
+
+        .ad-controls {
+            position: absolute;
+
+            left: 50%;
+            bottom: 18px;
+
+            transform:
+                translateX(-50%);
+
+            z-index: 30;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+        .ad-dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            border: 0;
+
+            background: #d9b7c2;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            padding: 0;
+        }
+
+        .ad-dot.active {
+            width: 24px;
+
+            border-radius: 10px;
+
+            background: #a9677d;
+        }
+
+
+        /* =====================================================
+           AD ARROWS
+        ====================================================== */
+
+        .ad-arrow {
+            position: absolute;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            z-index: 25;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid #dfc5cd;
+
+            background:
+                rgba(255, 255, 255, .85);
+
+            color: #725963;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-arrow:hover {
+            background: #35282d;
+
+            color: #fff;
+        }
+
+        .ad-prev {
+            left: 15px;
+        }
+
+        .ad-next {
+            right: 15px;
+        }
+
+
+        /* =====================================================
+           PROGRESS BAR
+        ====================================================== */
+
+        .ad-progress {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            height: 3px;
+
+            width: 33.333%;
+
+            background: #c37d93;
+
+            z-index: 40;
+
+            transition:
+                width .3s ease;
+        }
+
+
+        /* =====================================================
+           ANIMATION
+        ====================================================== */
+
+        @keyframes adOverlayIn {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes adBoxIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(25px)
+                    scale(.96);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            nav {
+                padding: 0 3%;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .logo {
+                min-width: auto;
+            }
+
+            .products {
+                max-width: 750px;
+            }
+
+            .story-content {
+                padding: 60px 8%;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            nav {
+                height: auto;
+
+                padding: 18px 20px;
+
+                flex-wrap: wrap;
+
+                gap: 16px;
+
+                justify-content: center;
+            }
+
+            .logo {
+                order: -1;
+
+                width: 100%;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 14px;
+            }
+
+            .nav-right {
+                position: static;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 430px;
+            }
+
+            .hero-content {
+                min-height: 500px;
+
+                align-items: center;
+
+                text-align: center;
+
+                padding: 60px 25px;
+            }
+
+            .hero-line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-description {
+                max-width: 430px;
+            }
+
+            .products {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 22px;
+            }
+
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+            .story-mark {
+                display: none;
+            }
+
+            .veloura-ad-slide {
+                grid-template-columns: 1fr;
+
+                overflow-y: auto;
+            }
+
+            .ad-store-image,
+            .ad-new-image {
+                min-height: 220px;
+                height: 220px;
+            }
+
+            .ad-content,
+            .ad-new-content {
+                padding: 30px 28px 65px;
+
+                min-height: 280px;
+            }
+
+            .ad-promotion {
+                min-height: 500px;
+            }
+
+            .ad-new-product {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .top-bar {
+                font-size: 8px;
+
+                letter-spacing: 1px;
+
+                text-align: center;
+            }
+
+            .hero-image {
+                min-height: 330px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .intro h2 {
+                font-size: 38px;
+            }
+
+            .collection {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+
+                max-width: 360px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .veloura-ad-overlay {
+                padding: 12px;
+            }
+
+            .veloura-ad-box,
+            .veloura-ad-slider {
+                min-height: 540px;
+            }
+
+            .ad-promotion {
+                min-height: 540px;
+            }
+
+            .ad-promotion h2 {
+                font-size: 43px;
+            }
+
+            .ad-content h2,
+            .ad-new-content h2 {
+                font-size: 40px;
+            }
+
+            .newsletter-main-button {
+                min-width: 280px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<div class="veloura-ad-overlay" id="velouraAd" role="dialog" aria-modal="true">
-<div class="veloura-ad-box">
-<button type="button" class="veloura-ad-close" id="closeVelouraAd" aria-label="ปิดโฆษณา"><i class="fa-solid fa-xmark"></i></button>
-<div class="veloura-ad-slider">
-<div class="veloura-ad-slide active">
-<div class="ad-store-image"><img src="images/perfume-hero.jpg" alt="Veloura Perfumes"></div>
-<div class="ad-content"><div class="ad-kicker">✦ WELCOME TO VELOURA ✦</div><h2>The Art<br><em>of Fragrance</em></h2><p>VELOURA เชื่อว่าน้ำหอมไม่ใช่เพียงแค่กลิ่นหอม แต่คือรายละเอียดที่สะท้อนตัวตน ความรู้สึก และความทรงจำของคุณ</p><a href="about.html" class="ad-button">รู้จัก VELOURA <i class="fa-solid fa-arrow-right"></i></a></div>
-</div>
-<div class="veloura-ad-slide">
-<div class="ad-promotion"><div class="ad-promotion-content"><div class="ad-kicker">✦ VELOURA SPECIAL OFFER ✦</div><h2>Special<br><em>Privilege</em></h2><div class="promo-big">FREE SHIPPING</div><p class="promo-detail">จัดส่งฟรีสำหรับทุกคำสั่งซื้อ เมื่อมียอดสั่งซื้อครบ $50 พร้อมพบกับคอลเลกชันและสิทธิพิเศษจาก VELOURA</p><div class="promo-code">✦ ORDER $50+ • FREE SHIPPING ✦</div><br><a href="products.html" class="ad-button">ช้อปสินค้า <i class="fa-solid fa-arrow-right"></i></a></div></div>
-</div>
-<div class="veloura-ad-slide">
-<div class="ad-new-product">
-<div class="ad-new-image"><div class="new-label">✦ NEW ARRIVAL</div><img src="images/perfume5.jpg" alt="Veloura New Scent" onerror="this.src='images/perfume-hero.jpg';"></div>
-<div class="ad-new-content"><div class="ad-kicker">VELOURA NEW COLLECTION</div><h2>Meet<br><em>the New Scent</em></h2><div class="ad-new-name">Veloura Signature</div><p class="ad-new-description">ค้นพบกลิ่นใหม่จาก VELOURA น้ำหอมที่ออกแบบมาเพื่อสะท้อนตัวตนและเสน่ห์ในแบบของคุณ</p><div class="ad-new-price">$75.00</div><a href="products.html" class="ad-button">ดูสินค้าใหม่ <i class="fa-solid fa-arrow-right"></i></a></div>
-</div>
-</div>
-</div>
-<button type="button" class="ad-arrow ad-prev" id="adPrev"><i class="fa-solid fa-chevron-left"></i></button>
-<button type="button" class="ad-arrow ad-next" id="adNext"><i class="fa-solid fa-chevron-right"></i></button>
-<div class="ad-controls"><button class="ad-dot active" data-slide="0"></button><button class="ad-dot" data-slide="1"></button><button class="ad-dot" data-slide="2"></button></div><div class="ad-progress" id="adProgress"></div>
-</div></div>
 
-<div class="top-bar">✦ จัดส่งฟรี เมื่อสั่งซื้อครบ $50 &nbsp; • &nbsp; LUXURY FRAGRANCE FOR EVERY MOMENT ✦</div>
-<nav>
-<a href="index.html" class="logo"><span class="logo-main">VELOURA</span><span class="logo-sub">PERFUMES</span></a>
-<div class="nav-links"><a href="index.html" class="active">หน้าแรก</a><a href="products.html">สินค้า</a><a href="about.html">เกี่ยวกับเรา</a><a href="collection.html">คอลเลกชัน</a><a href="find-scent.html">ค้นหากลิ่น</a><a href="contact.html">ติดต่อเรา</a></div>
-<div class="nav-right"><a href="account.html">บัญชี</a><a href="cart.html" class="cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span></a></div>
-</nav>
+    <!-- =====================================================
+         POPUP ADVERTISEMENT
+    ====================================================== -->
 
-<section class="hero"><div class="hero-image"><img src="images/perfume-hero.jpg" alt="Veloura Luxury Perfume"></div><div class="hero-content"><div class="eyebrow">✦ THE ART OF FRAGRANCE ✦</div><h1>กลิ่นหอมที่<br><em>เป็นตัวคุณ</em></h1><div class="hero-line"></div><p class="hero-description">ค้นพบเสน่ห์ของน้ำหอมที่คัดสรรอย่างพิถีพิถัน ให้ทุกกลิ่นบอกเล่าเรื่องราวและสะท้อนตัวตนของคุณ</p><a href="products.html" class="shop-button">เลือกซื้อน้ำหอม <i class="fa-solid fa-arrow-right"></i></a><div class="hero-note">✧ EAU DE PARFUM • SIGNATURE COLLECTION ✧</div></div></section>
+    <div class="veloura-ad-overlay"
+         id="velouraAd"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Veloura Advertisement">
 
-<section class="intro"><div class="intro-kicker">VELOURA SIGNATURE ✦</div><h2>คอลเลกชันแนะนำ</h2><p>สามกลิ่นที่คัดสรรจากสินค้าของ VELOURA</p></section>
-<section class="collection"><div class="products">
-<a href="products.html" class="product"><div class="product-image"><div class="product-tag">✦ BEST SELLER</div><img src="images/perfume1.jpg" alt="Veloura Essence" onerror="this.src='images/perfume-hero.jpg';"></div><div class="product-info"><h3>Veloura Essence</h3><p>Bergamot • Rose • Musk</p><div class="product-bottom"><span class="product-price">$59.00</span><span class="view-product">VIEW DETAILS ✦</span></div></div></a>
-<a href="products.html" class="product"><div class="product-image"><div class="product-tag">✧ SIGNATURE</div><img src="images/perfume2.jpg" alt="Veloura Rose" onerror="this.src='images/perfume-hero.jpg';"></div><div class="product-info"><h3>Veloura Rose</h3><p>Peony • Rose • Vanilla</p><div class="product-bottom"><span class="product-price">$65.00</span><span class="view-product">VIEW DETAILS ✦</span></div></div></a>
-<a href="products.html" class="product"><div class="product-image"><img src="images/perfume3.jpg" alt="Veloura Noir" onerror="this.src='images/perfume-hero.jpg';"></div><div class="product-info"><h3>Veloura Noir</h3><p>Elegant signature fragrance</p><div class="product-bottom"><span class="product-price">$69.00</span><span class="view-product">VIEW DETAILS ✦</span></div></div></a>
-</div></section>
+        <div class="veloura-ad-box">
 
-<section class="newsletter-cta-section"><div class="newsletter-cta-kicker">VELOURA PRIVILEGE</div><div class="newsletter-cta-content"><h2>เรื่องราวดี ๆ <em>ส่งตรงถึงคุณ</em></h2><p>รับข่าวสารคอลเลกชันใหม่ โปรโมชั่นพิเศษ และเรื่องราวของกลิ่นหอมจาก VELOURA</p><a href="newsletter.html" class="newsletter-main-button"><span class="button-icon"><i class="fa-regular fa-envelope"></i></span><span><strong>สมัครรับข่าวสาร</strong><small>VELOURA NEWSLETTER</small></span><i class="fa-solid fa-arrow-right button-arrow"></i></a><div class="newsletter-cta-note">✧ สมัครฟรี • รับสิทธิพิเศษเฉพาะสมาชิก ✧</div></div></section>
-<section class="story"><div class="story-content"><div class="story-kicker">ABOUT VELOURA ✧</div><h2>หอมอย่างมี<br>เอกลักษณ์</h2><p>VELOURA เชื่อว่าน้ำหอมไม่ใช่เพียงกลิ่นหอม แต่คือรายละเอียดเล็ก ๆ ที่ช่วยสะท้อนตัวตน ความรู้สึก และความทรงจำของผู้สวมใส่</p></div><div class="story-mark">V</div></section>
 
-<footer><div class="footer-container"><div><div class="footer-logo">VELOURA</div><p>Luxury fragrance crafted for those<br>who embrace their individuality.</p></div><div><h3>เมนู</h3><a href="index.html">หน้าแรก</a><a href="products.html">สินค้า</a><a href="about.html">เกี่ยวกับเรา</a><a href="collection.html">คอลเลกชัน</a></div><div><h3>บริการ</h3><a href="find-scent.html">ค้นหากลิ่น</a><a href="contact.html">ติดต่อเรา</a><a href="account.html">บัญชีของฉัน</a><a href="cart.html">รถเข็น</a></div></div><div class="copyright">© 2026 VELOURA PERFUMES. All Rights Reserved. ✦</div></footer>
+            <!-- CLOSE -->
 
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-const cartCount=document.getElementById('cartCount');let total=0;try{const cart=JSON.parse(localStorage.getItem('velouraCart'))||{};if(Array.isArray(cart)){cart.forEach(x=>total+=Number(x.quantity||x.qty||0))}else{Object.values(cart).forEach(x=>total+=typeof x==='object'?Number(x.quantity||x.qty||0):Number(x||0))}}catch(e){}if(total>0){cartCount.textContent=total;cartCount.style.display='flex'}else cartCount.style.display='none';
-const ad=document.getElementById('velouraAd'),close=document.getElementById('closeVelouraAd'),slides=document.querySelectorAll('.veloura-ad-slide'),dots=document.querySelectorAll('.ad-dot'),prev=document.getElementById('adPrev'),next=document.getElementById('adNext'),progress=document.getElementById('adProgress');let current=0,timer=null,time=4500;
-function show(i){if(i<0)i=slides.length-1;if(i>=slides.length)i=0;slides.forEach(s=>s.classList.remove('active'));dots.forEach(d=>d.classList.remove('active'));slides[i].classList.add('active');if(dots[i])dots[i].classList.add('active');current=i;progress.style.width=((i+1)/slides.length*100)+'%'}function start(){timer=setInterval(()=>show(current+1),time)}function restart(){clearInterval(timer);start()}function hide(){ad.style.opacity='0';ad.style.transition='opacity .25s';setTimeout(()=>ad.style.display='none',250);sessionStorage.setItem('velouraAdsClosed','1');clearInterval(timer)}
-next.onclick=()=>{show(current+1);restart()};prev.onclick=()=>{show(current-1);restart()};dots.forEach(d=>d.onclick=()=>{show(parseInt(d.dataset.slide));restart()});close.onclick=hide;ad.onclick=e=>{if(e.target===ad)hide()};document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ad.style.display!=='none')hide()});let sx=0;ad.addEventListener('touchstart',e=>sx=e.changedTouches[0].screenX,{passive:true});ad.addEventListener('touchend',e=>{let d=sx-e.changedTouches[0].screenX;if(Math.abs(d)>=50)d>0?(show(current+1),restart()):(show(current-1),restart())},{passive:true});
-if(sessionStorage.getItem('velouraAdsClosed')==='1'){ad.style.display='none';return}show(0);start();
-});
-</script>
+            <button type="button"
+                    class="veloura-ad-close"
+                    id="closeVelouraAd"
+                    aria-label="ปิดโฆษณา">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- SLIDER -->
+
+            <div class="veloura-ad-slider">
+
+
+                <!-- =================================================
+                     SLIDE 1 : ABOUT VELOURA
+                ================================================== -->
+
+                <div class="veloura-ad-slide active">
+
+                    <div class="ad-store-image">
+
+                        <img src="images/perfume-hero.jpg"
+                             alt="Veloura Perfumes">
+
+                    </div>
+
+
+                    <div class="ad-content">
+
+                        <div class="ad-kicker">
+                            ✦ WELCOME TO VELOURA ✦
+                        </div>
+
+                        <h2>
+                            The Art<br>
+                            <em>of Fragrance</em>
+                        </h2>
+
+                        <p>
+                            VELOURA เชื่อว่าน้ำหอมไม่ใช่เพียงแค่กลิ่นหอม
+                            แต่คือรายละเอียดที่สะท้อนตัวตน
+                            ความรู้สึก และความทรงจำของคุณ
+                        </p>
+
+                        <a href="about.html"
+                           class="ad-button">
+
+                            รู้จัก VELOURA
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SLIDE 2 : PROMOTION
+                ================================================== -->
+
+                <div class="veloura-ad-slide">
+
+                    <div class="ad-promotion">
+
+                        <div class="ad-promotion-content">
+
+                            <div class="ad-kicker">
+                                ✦ VELOURA SPECIAL OFFER ✦
+                            </div>
+
+                            <h2>
+                                Special<br>
+                                <em>Privilege</em>
+                            </h2>
+
+                            <div class="promo-big">
+                                FREE SHIPPING
+                            </div>
+
+                            <p class="promo-detail">
+                                จัดส่งฟรีสำหรับทุกคำสั่งซื้อ
+                                เมื่อมียอดสั่งซื้อครบ $50
+                                พร้อมพบกับคอลเลกชันและสิทธิพิเศษ
+                                จาก VELOURA
+                            </p>
+
+                            <div class="promo-code">
+                                ✦ ORDER $50+ • FREE SHIPPING ✦
+                            </div>
+
+                            <br>
+
+                            <a href="products.html"
+                               class="ad-button">
+
+                                ช้อปสินค้า
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SLIDE 3 : NEW PRODUCT
+                     ใช้ images/perfume5.jpg
+                ================================================== -->
+
+                <div class="veloura-ad-slide">
+
+                    <div class="ad-new-product">
+
+
+                        <!-- PRODUCT IMAGE -->
+
+                        <div class="ad-new-image">
+
+                            <div class="new-label">
+                                ✦ NEW ARRIVAL
+                            </div>
+
+                            <img src="images/perfume5.jpg"
+                                 alt="Veloura New Scent"
+                                 onerror="this.src='images/perfume-hero.jpg';">
+
+                        </div>
+
+
+                        <!-- PRODUCT INFORMATION -->
+
+                        <div class="ad-new-content">
+
+                            <div class="ad-kicker">
+                                VELOURA NEW COLLECTION
+                            </div>
+
+                            <h2>
+                                Meet<br>
+                                <em>the New Scent</em>
+                            </h2>
+
+                            <div class="ad-new-name">
+                                Veloura Signature
+                            </div>
+
+                            <p class="ad-new-description">
+                                ค้นพบกลิ่นใหม่จาก VELOURA
+                                น้ำหอมที่ออกแบบมาเพื่อสะท้อนตัวตน
+                                และเสน่ห์ในแบบของคุณ
+                            </p>
+
+                            <div class="ad-new-price">
+                                $75.00
+                            </div>
+
+                            <a href="products.html"
+                               class="ad-button">
+
+                                ดูสินค้าใหม่
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PREVIOUS BUTTON
+            ================================================== -->
+
+            <button type="button"
+                    class="ad-arrow ad-prev"
+                    id="adPrev"
+                    aria-label="โฆษณาก่อนหน้า">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 NEXT BUTTON
+            ================================================== -->
+
+            <button type="button"
+                    class="ad-arrow ad-next"
+                    id="adNext"
+                    aria-label="โฆษณาถัดไป">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <!-- =================================================
+                 DOTS
+            ================================================== -->
+
+            <div class="ad-controls">
+
+                <button type="button"
+                        class="ad-dot active"
+                        data-slide="0"
+                        aria-label="โฆษณาที่ 1">
+                </button>
+
+                <button type="button"
+                        class="ad-dot"
+                        data-slide="1"
+                        aria-label="โฆษณาที่ 2">
+                </button>
+
+                <button type="button"
+                        class="ad-dot"
+                        data-slide="2"
+                        aria-label="โฆษณาที่ 3">
+                </button>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="ad-progress"
+                 id="adProgress">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FLOATING SPARKLES
+    ====================================================== -->
+
+    <div class="sparkles"
+         aria-hidden="true">
+
+        <span>✦</span>
+        <span>✧</span>
+        <span>⋆</span>
+        <span>✦</span>
+        <span>✧</span>
+        <span>⋆</span>
+        <span>✦</span>
+        <span>✧</span>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <div class="top-bar">
+
+        ✦ จัดส่งฟรี เมื่อสั่งซื้อครบ $50
+        &nbsp; • &nbsp;
+        LUXURY FRAGRANCE FOR EVERY MOMENT ✦
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav>
+
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="logo">
+
+            <span class="logo-main">
+                VELOURA
+            </span>
+
+            <span class="logo-sub">
+                PERFUMES
+            </span>
+
+        </a>
+
+
+        <!-- MENU -->
+
+        <div class="nav-links">
+
+            <a href="index.html"
+               class="active">
+                หน้าแรก
+            </a>
+
+            <a href="products.html">
+                สินค้า
+            </a>
+
+            <a href="about.html">
+                เกี่ยวกับเรา
+            </a>
+
+            <a href="collection.html">
+                คอลเลกชัน
+            </a>
+
+            <a href="find-scent.html">
+                ค้นหากลิ่น
+            </a>
+
+            <a href="contact.html">
+                ติดต่อเรา
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT MENU -->
+
+        <div class="nav-right">
+
+            <a href="account.html">
+                บัญชี
+            </a>
+
+            <a href="cart.html"
+               class="cart">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-count"
+                      id="cartCount">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+
+        <!-- IMAGE -->
+
+        <div class="hero-image">
+
+            <img src="images/perfume-hero.jpg"
+                 alt="Veloura Luxury Perfume">
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ✦ THE ART OF FRAGRANCE ✦
+            </div>
+
+            <h1>
+                กลิ่นหอมที่<br>
+                <em>เป็นตัวคุณ</em>
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <p class="hero-description">
+
+                ค้นพบเสน่ห์ของน้ำหอมที่คัดสรรอย่างพิถีพิถัน
+                ให้ทุกกลิ่นบอกเล่าเรื่องราวและสะท้อนตัวตนของคุณ
+
+            </p>
+
+            <a href="products.html"
+               class="shop-button">
+
+                เลือกซื้อน้ำหอม
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+            <div class="hero-note">
+
+                ✧ EAU DE PARFUM • SIGNATURE COLLECTION ✧
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="intro">
+
+        <div class="intro-kicker">
+            VELOURA SIGNATURE ✦
+        </div>
+
+        <h2>
+            คอลเลกชันแนะนำ
+        </h2>
+
+        <p>
+            สามกลิ่นที่คัดสรรจากสินค้าของ VELOURA
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRODUCTS
+    ====================================================== -->
+
+    <section class="collection">
+
+        <div class="products">
+
+
+            <!-- PRODUCT 1 -->
+
+            <a href="products.html"
+               class="product">
+
+                <div class="product-image">
+
+                    <div class="product-tag">
+                        ✦ BEST SELLER
+                    </div>
+
+                    <img src="images/perfume1.jpg"
+                         alt="Veloura Essence"
+                         onerror="this.src='images/perfume-hero.jpg';">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Veloura Essence
+                    </h3>
+
+                    <p>
+                        Bergamot • Rose • Musk
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="product-price">
+                            $59.00
+                        </span>
+
+                        <span class="view-product">
+                            VIEW DETAILS ✦
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- PRODUCT 2 -->
+
+            <a href="products.html"
+               class="product">
+
+                <div class="product-image">
+
+                    <div class="product-tag">
+                        ✧ SIGNATURE
+                    </div>
+
+                    <img src="images/perfume2.jpg"
+                         alt="Veloura Rose"
+                         onerror="this.src='images/perfume-hero.jpg';">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Veloura Rose
+                    </h3>
+
+                    <p>
+                        Peony • Rose • Vanilla
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="product-price">
+                            $65.00
+                        </span>
+
+                        <span class="view-product">
+                            VIEW DETAILS ✦
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- PRODUCT 3 -->
+
+            <a href="products.html"
+               class="product">
+
+                <div class="product-image">
+
+                    <img src="images/perfume3.jpg"
+                         alt="Veloura Noir"
+                         onerror="this.src='images/perfume-hero.jpg';">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Veloura Noir
+                    </h3>
+
+                    <p>
+                        Elegant signature fragrance
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="product-price">
+                            $69.00
+                        </span>
+
+                        <span class="view-product">
+                            VIEW DETAILS ✦
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter-cta-section">
+
+
+        <div class="newsletter-cta-decoration">
+
+            ✦ &nbsp; ✧ &nbsp; ⋆ &nbsp; ✧ &nbsp; ✦
+
+        </div>
+
+
+        <div class="newsletter-cta-content">
+
+            <div class="newsletter-cta-kicker">
+                VELOURA PRIVILEGE
+            </div>
+
+            <h2>
+
+                เรื่องราวดี ๆ
+                <em>ส่งตรงถึงคุณ</em>
+
+            </h2>
+
+            <p>
+
+                รับข่าวสารคอลเลกชันใหม่ โปรโมชั่นพิเศษ
+                และเรื่องราวของกลิ่นหอมจาก VELOURA
+
+            </p>
+
+            <a href="newsletter.html"
+               class="newsletter-main-button">
+
+                <span class="button-icon">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                </span>
+
+                <span>
+
+                    <strong>
+                        สมัครรับข่าวสาร
+                    </strong>
+
+                    <small>
+                        VELOURA NEWSLETTER
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-right button-arrow"></i>
+
+            </a>
+
+            <div class="newsletter-cta-note">
+
+                ✧ สมัครฟรี • รับสิทธิพิเศษเฉพาะสมาชิก ✧
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STORY
+    ====================================================== -->
+
+    <section class="story">
+
+
+        <div class="story-content">
+
+            <div class="story-kicker">
+                ABOUT VELOURA ✧
+            </div>
+
+            <h2>
+
+                หอมอย่างมี<br>
+                เอกลักษณ์
+
+            </h2>
+
+            <p>
+
+                VELOURA เชื่อว่าน้ำหอมไม่ใช่เพียงกลิ่นหอม
+                แต่คือรายละเอียดเล็ก ๆ ที่ช่วยสะท้อนตัวตน
+                ความรู้สึก และความทรงจำของผู้สวมใส่
+
+            </p>
+
+        </div>
+
+
+        <div class="story-mark">
+            V
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div>
+
+                <div class="footer-logo">
+                    VELOURA
+                </div>
+
+                <p>
+
+                    Luxury fragrance crafted for those
+                    <br>
+                    who embrace their individuality.
+
+                </p>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <div>
+
+                <h3>
+                    เมนู
+                </h3>
+
+                <a href="index.html">
+                    หน้าแรก
+                </a>
+
+                <a href="products.html">
+                    สินค้า
+                </a>
+
+                <a href="about.html">
+                    เกี่ยวกับเรา
+                </a>
+
+                <a href="collection.html">
+                    คอลเลกชัน
+                </a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div>
+
+                <h3>
+                    บริการ
+                </h3>
+
+                <a href="find-scent.html">
+                    ค้นหากลิ่น
+                </a>
+
+                <a href="contact.html">
+                    ติดต่อเรา
+                </a>
+
+                <a href="account.html">
+                    บัญชีของฉัน
+                </a>
+
+                <a href="cart.html">
+                    รถเข็น
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026
+            VELOURA PERFUMES.
+            All Rights Reserved. ✦
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         - Cart Count
+         - Advertisement Slider
+         - Auto Slide
+         - Close
+         - ESC
+         - Touch Swipe
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* =================================================
+                   CART COUNT
+                ================================================== */
+
+                const cartCount =
+                    document.getElementById("cartCount");
+
+                let totalCartItems = 0;
+
+
+                try {
+
+                    const cart =
+                        JSON.parse(
+                            localStorage.getItem(
+                                "velouraCart"
+                            )
+                        ) || {};
+
+
+                    if (Array.isArray(cart)) {
+
+                        cart.forEach(function (item) {
+
+                            totalCartItems += Number(
+                                item.quantity ||
+                                item.qty ||
+                                0
+                            );
+
+                        });
+
+                    } else {
+
+                        Object.values(cart).forEach(
+                            function (item) {
+
+                                if (
+                                    typeof item === "object"
+                                ) {
+
+                                    totalCartItems += Number(
+                                        item.quantity ||
+                                        item.qty ||
+                                        0
+                                    );
+
+                                } else {
+
+                                    totalCartItems +=
+                                        Number(item || 0);
+
+                                }
+
+                            }
+                        );
+
+                    }
+
+                } catch (error) {
+
+                    totalCartItems = 0;
+
+                }
+
+
+                if (totalCartItems > 0) {
+
+                    cartCount.textContent =
+                        totalCartItems;
+
+                    cartCount.style.display =
+                        "flex";
+
+                } else {
+
+                    cartCount.style.display =
+                        "none";
+
+                }
+
+
+                /* =================================================
+                   ADVERTISEMENT ELEMENTS
+                ================================================== */
+
+                const ad =
+                    document.getElementById(
+                        "velouraAd"
+                    );
+
+                const closeAd =
+                    document.getElementById(
+                        "closeVelouraAd"
+                    );
+
+                const slides =
+                    document.querySelectorAll(
+                        ".veloura-ad-slide"
+                    );
+
+                const dots =
+                    document.querySelectorAll(
+                        ".ad-dot"
+                    );
+
+                const prev =
+                    document.getElementById(
+                        "adPrev"
+                    );
+
+                const next =
+                    document.getElementById(
+                        "adNext"
+                    );
+
+                const progress =
+                    document.getElementById(
+                        "adProgress"
+                    );
+
+
+                /* =================================================
+                   SLIDER VARIABLES
+                ================================================== */
+
+                let currentSlide = 0;
+
+                let autoSlide = null;
+
+                const slideTime = 4500;
+
+
+                /* =================================================
+                   SHOW SLIDE
+                ================================================== */
+
+                function showSlide(index) {
+
+                    if (index < 0) {
+
+                        index =
+                            slides.length - 1;
+
+                    }
+
+                    if (
+                        index >=
+                        slides.length
+                    ) {
+
+                        index = 0;
+
+                    }
+
+
+                    /* Remove active */
+
+                    slides.forEach(
+                        function (slide) {
+
+                            slide.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    dots.forEach(
+                        function (dot) {
+
+                            dot.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    /* Add active */
+
+                    slides[index].classList.add(
+                        "active"
+                    );
+
+
+                    if (dots[index]) {
+
+                        dots[index].classList.add(
+                            "active"
+                        );
+
+                    }
+
+
+                    currentSlide = index;
+
+
+                    /* Progress */
+
+                    if (progress) {
+
+                        progress.style.width =
+                            (
+                                (index + 1) /
+                                slides.length *
+                                100
+                            ) + "%";
+
+                    }
+
+                }
+
+
+                /* =================================================
+                   NEXT SLIDE
+                ================================================== */
+
+                function nextSlide() {
+
+                    showSlide(
+                        currentSlide + 1
+                    );
+
+                    restartAutoSlide();
+
+                }
+
+
+                /* =================================================
+                   PREVIOUS SLIDE
+                ================================================== */
+
+                function previousSlide() {
+
+                    showSlide(
+                        currentSlide - 1
+                    );
+
+                    restartAutoSlide();
+
+                }
+
+
+                /* =================================================
+                   AUTO SLIDE
+                ================================================== */
+
+                function startAutoSlide() {
+
+                    autoSlide =
+                        setInterval(
+                            function () {
+
+                                showSlide(
+                                    currentSlide + 1
+                                );
+
+                            },
+                            slideTime
+                        );
+
+                }
+
+
+                function restartAutoSlide() {
+
+                    clearInterval(
+                        autoSlide
+                    );
+
+                    startAutoSlide();
+
+                }
+
+
+                /* =================================================
+                   NEXT BUTTON
+                ================================================== */
+
+                if (next) {
+
+                    next.addEventListener(
+                        "click",
+                        nextSlide
+                    );
+
+                }
+
+
+                /* =================================================
+                   PREVIOUS BUTTON
+                ================================================== */
+
+                if (prev) {
+
+                    prev.addEventListener(
+                        "click",
+                        previousSlide
+                    );
+
+                }
+
+
+                /* =================================================
+                   DOT BUTTONS
+                ================================================== */
+
+                dots.forEach(
+                    function (dot) {
+
+                        dot.addEventListener(
+                            "click",
+                            function () {
+
+                                const index =
+                                    parseInt(
+                                        dot.getAttribute(
+                                            "data-slide"
+                                        )
+                                    );
+
+                                showSlide(index);
+
+                                restartAutoSlide();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   CLOSE POPUP
+                ================================================== */
+
+                function hideAd() {
+
+                    ad.style.opacity = "0";
+
+                    ad.style.transition =
+                        "opacity .25s ease";
+
+
+                    setTimeout(
+                        function () {
+
+                            ad.style.display =
+                                "none";
+
+                        },
+                        250
+                    );
+
+
+                    sessionStorage.setItem(
+                        "velouraAdsClosed",
+                        "1"
+                    );
+
+
+                    clearInterval(
+                        autoSlide
+                    );
+
+                }
+
+
+                if (closeAd) {
+
+                    closeAd.addEventListener(
+                        "click",
+                        hideAd
+                    );
+
+                }
+
+
+                /* =================================================
+                   CLICK OUTSIDE POPUP
+                ================================================== */
+
+                ad.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (
+                            event.target === ad
+                        ) {
+
+                            hideAd();
+
+                        }
+
+                    }
+                );
+
+
+                /* =================================================
+                   ESC KEY
+                ================================================== */
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            ad.style.display !== "none"
+                        ) {
+
+                            hideAd();
+
+                        }
+
+                    }
+                );
+
+
+                /* =================================================
+                   TOUCH / SWIPE
+                ================================================== */
+
+                let touchStartX = 0;
+
+                let touchEndX = 0;
+
+
+                ad.addEventListener(
+                    "touchstart",
+                    function (event) {
+
+                        touchStartX =
+                            event.changedTouches[0]
+                                .screenX;
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                ad.addEventListener(
+                    "touchend",
+                    function (event) {
+
+                        touchEndX =
+                            event.changedTouches[0]
+                                .screenX;
+
+
+                        const distance =
+                            touchStartX -
+                            touchEndX;
+
+
+                        if (
+                            Math.abs(distance) < 50
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        if (distance > 0) {
+
+                            nextSlide();
+
+                        } else {
+
+                            previousSlide();
+
+                        }
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                /* =================================================
+                   SHOW POPUP ONLY ONCE PER SESSION
+                ================================================== */
+
+                if (
+                    sessionStorage.getItem(
+                        "velouraAdsClosed"
+                    ) === "1"
+                ) {
+
+                    ad.style.display =
+                        "none";
+
+                    return;
+
+                }
+
+
+                /* =================================================
+                   START SLIDER
+                ================================================== */
+
+                showSlide(0);
+
+                startAutoSlide();
+
+            }
+
+        );
+
+    </script>
+
+
 </body>
+
 </html>
