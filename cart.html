@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ตะกร้าสินค้า | VELOURA PERFUMES</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Montserrat",
+                "Noto Sans Thai",
+                sans-serif;
+
+            color: #493b38;
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(255,255,255,.8),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(236,194,210,.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff8fa 0%,
+                    #f9eef2 45%,
+                    #f5e4ea 100%
+                );
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            width: 100%;
+            padding: 9px 20px;
+            text-align: center;
+
+            background: #493b38;
+            color: #fff8fa;
+
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 20px 6%;
+
+            background: rgba(255,248,250,.88);
+            backdrop-filter: blur(16px);
+
+            border-bottom: 1px solid rgba(120,85,90,.12);
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-left a,
+        .nav-right a {
+            position: relative;
+
+            font-size: 11px;
+            letter-spacing: 1.5px;
+
+            color: #493b38;
+
+            transition: .3s ease;
+        }
+
+        .nav-left a:hover,
+        .nav-right a:hover {
+            color: #a66d82;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 34px;
+            font-weight: 600;
+            letter-spacing: 7px;
+
+            color: #493b38;
+            white-space: nowrap;
+        }
+
+        .cart-link {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+
+            top: -10px;
+            right: -13px;
+
+            min-width: 18px;
+            height: 18px;
+
+            padding: 0 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #a66d82;
+            color: white;
+
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 360px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px 70px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(1px);
+        }
+
+        .hero::before {
+            width: 250px;
+            height: 250px;
+
+            left: -80px;
+            top: 30px;
+
+            background: rgba(226,171,191,.18);
+        }
+
+        .hero::after {
+            width: 300px;
+            height: 300px;
+
+            right: -100px;
+            bottom: -100px;
+
+            background: rgba(210,177,190,.16);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: #a66d82;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(52px, 8vw, 90px);
+            font-weight: 500;
+
+            letter-spacing: 4px;
+
+            color: #493b38;
+
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: #796967;
+        }
+
+        /* =========================
+           CART SECTION
+        ========================= */
+
+        .cart-section {
+            width: min(1200px, 90%);
+            margin: 0 auto 100px;
+        }
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1fr 370px;
+            gap: 50px;
+
+            align-items: start;
+        }
+
+        /* =========================
+           CART ITEMS
+        ========================= */
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: grid;
+
+            grid-template-columns: 130px 1fr auto;
+
+            gap: 25px;
+
+            padding: 20px;
+
+            background: rgba(255,255,255,.65);
+
+            border: 1px solid rgba(117,83,89,.13);
+
+            box-shadow:
+                0 15px 40px rgba(94,64,72,.07);
+
+            transition: .3s ease;
+        }
+
+        .cart-item:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 20px 50px rgba(94,64,72,.11);
+        }
+
+        .product-image {
+            width: 130px;
+            height: 155px;
+
+            overflow: hidden;
+
+            background: #f4e7eb;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s ease;
+        }
+
+        .cart-item:hover .product-image img {
+            transform: scale(1.04);
+        }
+
+        .product-info {
+            padding: 5px 0;
+        }
+
+        .product-name {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 29px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            color: #493b38;
+
+            margin-bottom: 8px;
+        }
+
+        .product-description {
+            font-size: 12px;
+            line-height: 1.8;
+
+            color: #806f6c;
+
+            max-width: 450px;
+
+            margin-bottom: 20px;
+        }
+
+        .product-price {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 22px;
+            font-weight: 600;
+
+            color: #a66d82;
+        }
+
+        /* =========================
+           QUANTITY
+        ========================= */
+
+        .quantity-box {
+            display: flex;
+            align-items: center;
+
+            width: fit-content;
+
+            border: 1px solid rgba(117,83,89,.25);
+
+            margin-top: 15px;
+        }
+
+        .quantity-btn {
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 0;
+            background: transparent;
+
+            color: #493b38;
+
+            cursor: pointer;
+
+            transition: .25s ease;
+        }
+
+        .quantity-btn:hover {
+            background: #f2dfe6;
+            color: #a66d82;
+        }
+
+        .quantity-number {
+            min-width: 38px;
+
+            text-align: center;
+
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .item-right {
+            min-width: 120px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .item-total {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 24px;
+            font-weight: 600;
+
+            color: #493b38;
+        }
+
+        .remove-btn {
+            border: 0;
+            background: transparent;
+
+            color: #a68b91;
+
+            font-size: 10px;
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            transition: .25s ease;
+        }
+
+        .remove-btn:hover {
+            color: #9b425f;
+        }
+
+        /* =========================
+           SUMMARY
+        ========================= */
+
+        .summary {
+            position: sticky;
+            top: 110px;
+
+            padding: 32px;
+
+            background: rgba(255,255,255,.7);
+
+            border: 1px solid rgba(117,83,89,.13);
+
+            box-shadow:
+                0 20px 50px rgba(94,64,72,.08);
+        }
+
+        .summary-title {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 34px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 25px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 13px 0;
+
+            font-size: 12px;
+
+            border-bottom: 1px solid rgba(117,83,89,.1);
+        }
+
+        .summary-line span:last-child {
+            font-weight: 500;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 25px 0;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 29px;
+            font-weight: 600;
+        }
+
+        .summary-total span:last-child {
+            color: #a66d82;
+        }
+
+        .checkout-btn {
+            width: 100%;
+
+            padding: 16px 20px;
+
+            border: 1px solid #493b38;
+
+            background: #493b38;
+            color: #fff;
+
+            font-size: 11px;
+            font-weight: 500;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #a66d82;
+            border-color: #a66d82;
+        }
+
+        .continue-btn {
+            width: 100%;
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 12px;
+
+            padding: 15px 20px;
+
+            border: 1px solid rgba(73,59,56,.25);
+
+            color: #493b38;
+
+            font-size: 10px;
+            letter-spacing: 1.5px;
+
+            transition: .3s ease;
+        }
+
+        .continue-btn:hover {
+            background: #f5e4ea;
+        }
+
+        .clear-btn {
+            width: 100%;
+
+            margin-top: 18px;
+
+            padding: 10px;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #9a8589;
+
+            font-size: 10px;
+            letter-spacing: 1px;
+
+            cursor: pointer;
+        }
+
+        .clear-btn:hover {
+            color: #9b425f;
+        }
+
+        /* =========================
+           EMPTY CART
+        ========================= */
+
+        .empty-cart {
+            display: none;
+
+            text-align: center;
+
+            padding: 80px 30px;
+
+            background: rgba(255,255,255,.65);
+
+            border: 1px solid rgba(117,83,89,.13);
+        }
+
+        .empty-cart.show {
+            display: block;
+        }
+
+        .empty-icon {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f5e4ea;
+
+            color: #a66d82;
+
+            font-size: 27px;
+        }
+
+        .empty-cart h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 36px;
+
+            margin-bottom: 10px;
+        }
+
+        .empty-cart p {
+            color: #806f6c;
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+        }
+
+        .shop-btn {
+            display: inline-block;
+
+            padding: 14px 30px;
+
+            background: #493b38;
+            color: #fff;
+
+            font-size: 10px;
+            letter-spacing: 2px;
+
+            transition: .3s ease;
+        }
+
+        .shop-btn:hover {
+            background: #a66d82;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 60px 6% 30px;
+
+            background: #493b38;
+            color: #fff8fa;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 39px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-about {
+            font-size: 11px;
+
+            line-height: 1.9;
+
+            color: rgba(255,255,255,.7);
+
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+
+            gap: 11px;
+        }
+
+        .footer-links a {
+            font-size: 10px;
+
+            color: rgba(255,255,255,.65);
+
+            transition: .25s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .socials a {
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.2);
+
+            border-radius: 50%;
+
+            color: white;
+
+            transition: .25s ease;
+        }
+
+        .socials a:hover {
+            background: rgba(255,255,255,.12);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+
+            margin: 50px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,.12);
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+
+            color: rgba(255,255,255,.45);
+        }
+
+        /* =========================
+           SPARKLES
+        ========================= */
+
+        .sparkle {
+            position: fixed;
+
+            pointer-events: none;
+
+            z-index: 999;
+
+            color: rgba(166,109,130,.35);
+
+            animation: sparkleFloat 4s linear forwards;
+        }
+
+        @keyframes sparkleFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(.5);
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1.2);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .navbar {
+                padding: 18px 4%;
+            }
+
+            .nav-left {
+                gap: 12px;
+            }
+
+            .nav-left a:nth-child(n+4) {
+                display: none;
+            }
+
+            .logo {
+                font-size: 28px;
+                letter-spacing: 5px;
+            }
+
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .summary {
+                position: static;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .top-bar {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+
+            .navbar {
+                padding: 16px 20px;
+            }
+
+            .nav-left {
+                display: none;
+            }
+
+            .nav-right {
+                margin-left: auto;
+            }
+
+            .logo {
+                position: static;
+                transform: none;
+
+                margin: 0 auto;
+
+                font-size: 25px;
+                letter-spacing: 4px;
+            }
+
+            .hero {
+                min-height: 280px;
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 58px;
+            }
+
+            .hero-small {
+                font-size: 9px;
+                letter-spacing: 3px;
+            }
+
+            .cart-section {
+                width: 92%;
+            }
+
+            .cart-item {
+                grid-template-columns: 90px 1fr;
+                gap: 15px;
+
+                padding: 15px;
+            }
+
+            .product-image {
+                width: 90px;
+                height: 115px;
+            }
+
+            .product-name {
+                font-size: 24px;
+            }
+
+            .product-description {
+                font-size: 10px;
+            }
+
+            .item-right {
+                grid-column: 1 / -1;
+
+                min-width: 0;
+
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .item-total {
+                font-size: 22px;
+            }
+
+            .summary {
+                padding: 25px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        ✦ จัดส่งฟรี เมื่อสั่งซื้อครบ ฿1,500 ✦
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-left">
+
+            <a href="index.html">หน้าแรก</a>
+
+            <a href="products.html">สินค้า</a>
+
+            <a href="about.html">เกี่ยวกับเรา</a>
+
+            <a href="collection.html">คอลเลกชัน</a>
+
+            <a href="find-scent.html">ค้นหากลิ่น</a>
+
+        </div>
+
+        <a href="index.html" class="logo">
+            VELOURA
+        </a>
+
+        <div class="nav-right">
+
+            <a href="contact.html">
+                ติดต่อ
+            </a>
+
+            <a href="profile.html">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="cart.html" class="cart-link">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span class="cart-badge" id="cartBadge">
+                    2
+                </span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                YOUR SELECTION
+            </div>
+
+            <h1>
+                Shopping Bag
+            </h1>
+
+            <p>
+                คอลเลกชันกลิ่นหอมที่คุณเลือกไว้
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CART -->
+    <main class="cart-section">
+
+        <!-- CART CONTENT -->
+        <div id="cartContent">
+
+            <div class="cart-layout">
+
+                <!-- ITEMS -->
+                <div class="cart-items" id="cartItems">
+
+                    <!-- PRODUCT 1 -->
+                    <div
+                        class="cart-item"
+                        data-price="1290"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/veloura-rose.jpg"
+                                alt="VELOURA ROSE"
+                                onerror="this.src='images/perfume-placeholder.jpg'"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="product-name">
+                                VELOURA ROSE
+                            </div>
+
+                            <div class="product-description">
+                                กลิ่นหอมหวานละมุนและโรแมนติก
+                                เหมาะสำหรับผู้ที่ชื่นชอบความหอมแบบดอกไม้
+                            </div>
+
+                            <div class="product-price">
+                                ฿1,290.00
+                            </div>
+
+                            <div class="quantity-box">
+
+                                <button
+                                    class="quantity-btn minus-btn"
+                                    type="button"
+                                >
+                                    −
+                                </button>
+
+                                <span class="quantity-number">
+                                    1
+                                </span>
+
+                                <button
+                                    class="quantity-btn plus-btn"
+                                    type="button"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="item-right">
+
+                            <div class="item-total">
+                                ฿1,290.00
+                            </div>
+
+                            <button
+                                type="button"
+                                class="remove-btn"
+                            >
+                                <i class="fa-regular fa-trash-can"></i>
+                                ลบสินค้า
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT 2 -->
+                    <div
+                        class="cart-item"
+                        data-price="1490"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/midnight-allure.jpg"
+                                alt="MIDNIGHT ALLURE"
+                                onerror="this.src='images/perfume-placeholder.jpg'"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="product-name">
+                                MIDNIGHT ALLURE
+                            </div>
+
+                            <div class="product-description">
+                                กลิ่นหอมลึกลับ เย้ายวน และมีเสน่ห์
+                                เหมาะสำหรับค่ำคืนพิเศษ
+                            </div>
+
+                            <div class="product-price">
+                                ฿1,490.00
+                            </div>
+
+                            <div class="quantity-box">
+
+                                <button
+                                    class="quantity-btn minus-btn"
+                                    type="button"
+                                >
+                                    −
+                                </button>
+
+                                <span class="quantity-number">
+                                    1
+                                </span>
+
+                                <button
+                                    class="quantity-btn plus-btn"
+                                    type="button"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="item-right">
+
+                            <div class="item-total">
+                                ฿1,490.00
+                            </div>
+
+                            <button
+                                type="button"
+                                class="remove-btn"
+                            >
+                                <i class="fa-regular fa-trash-can"></i>
+                                ลบสินค้า
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+                <aside class="summary">
+
+                    <div class="summary-title">
+                        สรุปคำสั่งซื้อ
+                    </div>
+
+                    <div class="summary-line">
+
+                        <span>
+                            จำนวนสินค้า
+                        </span>
+
+                        <span id="totalItems">
+                            2 ชิ้น
+                        </span>
+
+                    </div>
+
+                    <div class="summary-line">
+
+                        <span>
+                            ราคาสินค้า
+                        </span>
+
+                        <span id="subtotal">
+                            ฿2,780.00
+                        </span>
+
+                    </div>
+
+                    <div class="summary-line">
+
+                        <span>
+                            ค่าจัดส่ง
+                        </span>
+
+                        <span id="shipping">
+                            ฟรี
+                        </span>
+
+                    </div>
+
+                    <div class="summary-total">
+
+                        <span>
+                            ยอดรวม
+                        </span>
+
+                        <span id="grandTotal">
+                            ฿2,780.00
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="checkout-btn"
+                        onclick="checkout()"
+                    >
+                        ดำเนินการสั่งซื้อ
+                    </button>
+
+                    <a
+                        href="products.html"
+                        class="continue-btn"
+                    >
+                        เลือกซื้อสินค้าเพิ่มเติม
+                    </a>
+
+                    <button
+                        type="button"
+                        class="clear-btn"
+                        id="clearCart"
+                    >
+                        ล้างตะกร้าสินค้าทั้งหมด
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMPTY CART -->
+        <div
+            class="empty-cart"
+            id="emptyCart"
+        >
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+            </div>
+
+            <h2>
+                ตะกร้าของคุณยังว่าง
+            </h2>
+
+            <p>
+                เลือกกลิ่นหอมที่คุณชื่นชอบ
+                และเพิ่มลงในตะกร้าได้เลย
+            </p>
+
+            <a
+                href="products.html"
+                class="shop-btn"
+            >
+                เลือกซื้อสินค้า
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+                    VELOURA
+                </div>
+
+                <div class="footer-about">
+                    น้ำหอมที่สะท้อนความเป็นตัวคุณ
+                    ผ่านกลิ่นหอมที่ถูกออกแบบอย่างพิถีพิถัน
+                    เพื่อทุกช่วงเวลาที่มีความหมาย
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    EXPLORE
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        หน้าแรก
+                    </a>
+
+                    <a href="products.html">
+                        สินค้าทั้งหมด
+                    </a>
+
+                    <a href="collection.html">
+                        คอลเลกชัน
+                    </a>
+
+                    <a href="find-scent.html">
+                        ค้นหากลิ่น
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    INFORMATION
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="about.html">
+                        เกี่ยวกับเรา
+                    </a>
+
+                    <a href="contact.html">
+                        ติดต่อเรา
+                    </a>
+
+                    <a href="profile.html">
+                        บัญชีของฉัน
+                    </a>
+
+                    <a href="#">
+                        นโยบายความเป็นส่วนตัว
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    FOLLOW US
+                </div>
+
+                <div class="socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 VELOURA PERFUMES. ALL RIGHTS RESERVED.
+            </span>
+
+            <span>
+                MADE WITH ✦ FOR YOUR SIGNATURE SCENT
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const cartItems = document.getElementById("cartItems");
+        const cartContent = document.getElementById("cartContent");
+        const emptyCart = document.getElementById("emptyCart");
+
+        const totalItemsElement =
+            document.getElementById("totalItems");
+
+        const subtotalElement =
+            document.getElementById("subtotal");
+
+        const grandTotalElement =
+            document.getElementById("grandTotal");
+
+        const cartBadge =
+            document.getElementById("cartBadge");
+
+
+        function formatPrice(number) {
+
+            return "฿" + number.toLocaleString("th-TH", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+
+        }
+
+
+        function updateCart() {
+
+            const items =
+                document.querySelectorAll(".cart-item");
+
+            let totalItems = 0;
+            let subtotal = 0;
+
+
+            items.forEach(function(item) {
+
+                const price =
+                    parseFloat(item.dataset.price);
+
+                const quantity =
+                    parseInt(
+                        item.querySelector(".quantity-number").textContent
+                    );
+
+                const itemTotal =
+                    price * quantity;
+
+
+                item.querySelector(".item-total").textContent =
+                    formatPrice(itemTotal);
+
+
+                totalItems += quantity;
+
+                subtotal += itemTotal;
+
+            });
+
+
+            totalItemsElement.textContent =
+                totalItems + " ชิ้น";
+
+
+            subtotalElement.textContent =
+                formatPrice(subtotal);
+
+
+            grandTotalElement.textContent =
+                formatPrice(subtotal);
+
+
+            cartBadge.textContent =
+                totalItems;
+
+
+            if (items.length === 0) {
+
+                cartContent.style.display = "none";
+
+                emptyCart.classList.add("show");
+
+                cartBadge.style.display = "none";
+
+            } else {
+
+                cartContent.style.display = "block";
+
+                emptyCart.classList.remove("show");
+
+                cartBadge.style.display = "flex";
+
+            }
+
+        }
+
+
+        function addQuantity(button) {
+
+            const item =
+                button.closest(".cart-item");
+
+            const quantityElement =
+                item.querySelector(".quantity-number");
+
+            let quantity =
+                parseInt(quantityElement.textContent);
+
+            quantity++;
+
+            quantityElement.textContent =
+                quantity;
+
+            updateCart();
+
+        }
+
+
+        function reduceQuantity(button) {
+
+            const item =
+                button.closest(".cart-item");
+
+            const quantityElement =
+                item.querySelector(".quantity-number");
+
+            let quantity =
+                parseInt(quantityElement.textContent);
+
+
+            if (quantity > 1) {
+
+                quantity--;
+
+                quantityElement.textContent =
+                    quantity;
+
+                updateCart();
+
+            }
+
+        }
+
+
+        function removeItem(button) {
+
+            const item =
+                button.closest(".cart-item");
+
+            item.style.opacity = "0";
+
+            item.style.transform = "translateX(30px)";
+
+            setTimeout(function() {
+
+                item.remove();
+
+                updateCart();
+
+            }, 250);
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target.closest(".plus-btn")
+                ) {
+
+                    addQuantity(
+                        event.target.closest(".plus-btn")
+                    );
+
+                }
+
+
+                if (
+                    event.target.closest(".minus-btn")
+                ) {
+
+                    reduceQuantity(
+                        event.target.closest(".minus-btn")
+                    );
+
+                }
+
+
+                if (
+                    event.target.closest(".remove-btn")
+                ) {
+
+                    removeItem(
+                        event.target.closest(".remove-btn")
+                    );
+
+                }
+
+            }
+        );
+
+
+        document
+            .getElementById("clearCart")
+            .addEventListener(
+                "click",
+                function() {
+
+                    const confirmClear =
+                        confirm(
+                            "คุณต้องการล้างสินค้าทั้งหมดออกจากตะกร้าหรือไม่?"
+                        );
+
+
+                    if (!confirmClear) {
+                        return;
+                    }
+
+
+                    cartItems.innerHTML = "";
+
+                    updateCart();
+
+                }
+            );
+
+
+        function checkout() {
+
+            const items =
+                document.querySelectorAll(".cart-item");
+
+            if (items.length === 0) {
+
+                alert(
+                    "กรุณาเลือกสินค้าก่อนดำเนินการสั่งซื้อ"
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                "กำลังเข้าสู่หน้าชำระเงิน"
+            );
+
+            window.location.href =
+                "checkout.html";
+
+        }
+
+
+        /* =========================
+           SPARKLE EFFECT
+        ========================= */
+
+        function createSparkle() {
+
+            const sparkle =
+                document.createElement("div");
+
+            sparkle.className = "sparkle";
+
+            sparkle.innerHTML = "✦";
+
+            sparkle.style.left =
+                Math.random() * 100 + "vw";
+
+            sparkle.style.top =
+                Math.random() * 100 + "vh";
+
+            sparkle.style.fontSize =
+                (Math.random() * 10 + 6) + "px";
+
+
+            document.body.appendChild(sparkle);
+
+
+            setTimeout(function() {
+
+                sparkle.remove();
+
+            }, 4000);
+
+        }
+
+
+        setInterval(
+            createSparkle,
+            1200
+        );
+
+
+        /* INITIAL UPDATE */
+
+        updateCart();
+
+    </script>
+
+</body>
+</html>
