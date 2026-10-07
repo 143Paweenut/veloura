@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>บัญชีของฉัน | VELOURA PERFUMES</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: "Montserrat", "Noto Sans Thai", sans-serif;
+            color: #493b38;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(255, 202, 216, .55),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(246, 220, 180, .30),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 50% 75%,
+                    rgba(255, 226, 233, .55),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fffafa,
+                    #fff4f6,
+                    #fffaf5
+                );
+        }
+
+        /* Scrollbar */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff6f7;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#e7b5bd, #c49b62);
+            border-radius: 20px;
+        }
+
+        /* Sparkles */
+
+        .sparkles {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .sparkles span {
+            position: absolute;
+            color: #d5ad68;
+            font-size: 10px;
+            opacity: .5;
+
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px rgba(213,173,104,.7),
+                0 0 20px rgba(246,205,214,.9);
+
+            animation:
+                sparkleFloat
+                5s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes sparkleFloat {
+
+            0% {
+                opacity: .15;
+                transform:
+                    translateY(0)
+                    scale(.7)
+                    rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform:
+                    translateY(-25px)
+                    scale(1.4)
+                    rotate(25deg);
+            }
+
+            100% {
+                opacity: .15;
+                transform:
+                    translateY(0)
+                    scale(.7)
+                    rotate(50deg);
+            }
+        }
+
+        /* Top Bar */
+
+        .top-bar {
+            position: relative;
+            z-index: 100;
+
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 10px;
+            letter-spacing: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #a87970,
+                    #d6a8ad,
+                    #c8a36c,
+                    #d6a8ad,
+                    #a87970
+                );
+
+            box-shadow:
+                0 3px 20px rgba(122,80,76,.12);
+        }
+
+        /* Navbar */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            height: 88px;
+
+            display: grid;
+
+            grid-template-columns:
+                230px
+                1fr
+                230px;
+
+            align-items: center;
+
+            padding: 0 5%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.88),
+                    rgba(255,240,244,.72),
+                    rgba(255,255,255,.88)
+                );
+
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+
+            border-bottom:
+                1px solid
+                rgba(190,145,108,.22);
+
+            box-shadow:
+                0 8px 35px
+                rgba(113,74,69,.08);
+
+            overflow: hidden;
+        }
+
+        .navbar::after {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: -100%;
+
+            width: 50%;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,255,255,.5),
+                    transparent
+                );
+
+            transform: skewX(-25deg);
+
+            animation:
+                navShine
+                7s
+                infinite;
+        }
+
+        @keyframes navShine {
+
+            0% {
+                left: -100%;
+            }
+
+            25%,
+            100% {
+                left: 150%;
+            }
+        }
+
+        /* Logo */
+
+        .logo {
+            position: relative;
+            z-index: 5;
+
+            width: max-content;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 38px;
+            font-weight: 600;
+
+            letter-spacing: 8px;
+            line-height: .8;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #352825,
+                    #916b59,
+                    #c59b5c,
+                    #6e4c43
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-sub {
+            margin-top: 9px;
+            margin-left: 5px;
+
+            font-size: 7px;
+            letter-spacing: 5px;
+
+            color: #b18b68;
+        }
+
+        /* Menu */
+
+        .nav-menu {
+            position: relative;
+            z-index: 5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            position: relative;
+
+            color: #5a4742;
+            text-decoration: none;
+
+            font-family:
+                "Noto Sans Thai",
+                sans-serif;
+
+            font-size: 11px;
+
+            transition: .3s ease;
+        }
+
+        .nav-menu a::before {
+            content: "✦";
+
+            position: absolute;
+            top: -12px;
+            left: 50%;
+
+            transform:
+                translateX(-50%)
+                scale(.2);
+
+            color: #c9a15f;
+            opacity: 0;
+
+            transition: .3s ease;
+        }
+
+        .nav-menu a::after {
+            content: "";
+
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+
+            width: 0;
+            height: 1px;
+
+            transform: translateX(-50%);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #c39b61,
+                    transparent
+                );
+
+            transition: .35s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #a4746d;
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a:hover::before {
+            opacity: 1;
+
+            transform:
+                translateX(-50%)
+                scale(1);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Right Buttons */
+
+        .nav-right {
+            position: relative;
+            z-index: 5;
+
+            display: flex;
+            justify-content: flex-end;
+
+            gap: 9px;
+        }
+
+        .nav-button {
+            position: relative;
+
+            height: 40px;
+            min-width: 82px;
+
+            padding: 0 13px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+
+            color: #604a44;
+            text-decoration: none;
+
+            border:
+                1px solid
+                rgba(190,145,108,.25);
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,.5);
+
+            backdrop-filter: blur(10px);
+
+            transition: .3s ease;
+        }
+
+        .nav-button i {
+            color: #b38b58;
+            font-size: 12px;
+        }
+
+        .nav-button span {
+            font-family:
+                "Noto Sans Thai",
+                sans-serif;
+
+            font-size: 10px;
+        }
+
+        .nav-button:hover {
+            color: #a66f70;
+
+            background:
+                rgba(250,216,224,.55);
+
+            border-color:
+                rgba(190,145,108,.5);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 22px
+                rgba(181,128,130,.15);
+        }
+
+        /* Navbar Sparkles */
+
+        .nav-sparkle {
+            position: absolute;
+
+            color: #d5ad68;
+
+            text-shadow:
+                0 0 6px #fff,
+                0 0 15px rgba(213,173,104,.8);
+
+            animation:
+                navTwinkle
+                2s
+                ease-in-out
+                infinite;
+
+            pointer-events: none;
+        }
+
+        .ns1 {
+            top: 15px;
+            left: 29%;
+            font-size: 9px;
+        }
+
+        .ns2 {
+            bottom: 12px;
+            left: 54%;
+            font-size: 7px;
+            animation-delay: .7s;
+        }
+
+        .ns3 {
+            top: 18px;
+            right: 24%;
+            font-size: 12px;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes navTwinkle {
+
+            0%,
+            100% {
+                opacity: .2;
+
+                transform:
+                    scale(.7)
+                    rotate(0);
+            }
+
+            50% {
+                opacity: 1;
+
+                transform:
+                    scale(1.4)
+                    rotate(25deg);
+            }
+        }
+
+        /* Page Header */
+
+        .page-header {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+
+            padding:
+                80px 20px
+                45px;
+        }
+
+        .small-title {
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 11px;
+            letter-spacing: 5px;
+
+            color: #b58d63;
+
+            margin-bottom: 12px;
+        }
+
+        .page-header h1 {
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 58px;
+            font-weight: 500;
+
+            color: #604a44;
+
+            line-height: 1;
+        }
+
+        .page-header p {
+            margin-top: 15px;
+
+            font-family:
+                "Noto Sans Thai",
+                sans-serif;
+
+            font-size: 13px;
+
+            color: #8c7470;
+        }
+
+        /* Main */
+
+        .container {
+            position: relative;
+            z-index: 2;
+
+            width: min(950px, 92%);
+
+            margin: 0 auto 90px;
+        }
+
+        /* Profile Card */
+
+        .profile-card {
+            overflow: hidden;
+
+            background:
+                rgba(255,255,255,.72);
+
+            border:
+                1px solid
+                rgba(190,145,108,.25);
+
+            border-radius: 28px;
+
+            backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 20px 60px
+                rgba(133,89,87,.12);
+        }
+
+        /* Profile Top */
+
+        .profile-top {
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
+
+            padding: 40px 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,237,242,.85),
+                    rgba(255,249,245,.8)
+                );
+
+            border-bottom:
+                1px solid
+                rgba(190,145,108,.18);
+        }
+
+        .avatar {
+            width: 85px;
+            height: 85px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 40px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #b98d89,
+                    #d9afb5,
+                    #c6a26d
+                );
+
+            box-shadow:
+                0 10px 25px
+                rgba(169,117,118,.25);
+        }
+
+        .welcome h2 {
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 32px;
+            font-weight: 600;
+
+            color: #604a44;
+        }
+
+        .welcome p {
+            margin-top: 7px;
+
+            font-family:
+                "Noto Sans Thai",
+                sans-serif;
+
+            font-size: 12px;
+
+            color: #9a7b75;
+        }
+
+        /* Account Content */
+
+        .account-content {
+            padding:
+                45px 50px 50px;
+        }
+
+        .section-title {
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 29px;
+            font-weight: 600;
+
+            color: #70514a;
+        }
+
+        .section-line {
+            width: 100%;
+            height: 1px;
+
+            margin:
+                12px 0 5px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #d1ad75,
+                    rgba(209,173,117,.15),
+                    transparent
+                );
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+
+            min-height: 55px;
+
+            padding:
+                10px 5px;
+
+            border-bottom:
+                1px solid
+                rgba(190,145,108,.12);
+        }
+
+        .label {
+            width: 190px;
+            flex-shrink: 0;
+
+            font-family:
+                "Noto Sans Thai",
+                sans-serif;
+
+            font-size: 12px;
+            font-weight: 500;
+
+            color: #a07870;
+        }
+
+        .value {
+            font-size: 13px;
+            color: #5c4945;
+        }
+
+        /* Scent Tags */
+
+        .scent-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .scent-tag {
+            display: inline-block;
+
+            padding:
+                7px 14px;
+
+            border-radius: 20px;
+
+            font-size: 10px;
+            letter-spacing: 1px;
+
+            color: #7c5d59;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f3,
+                    #fff8ed
+                );
+
+            border:
+                1px solid
+                rgba(196,155,98,.25);
+        }
+
+        /* Newsletter */
+
+        .newsletter-yes {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 7px;
+
+            color: #8c6d57;
+        }
+
+        .newsletter-yes::before {
+            content: "✓";
+
+            width: 20px;
+            height: 20px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #b98b82,
+                    #d1a56a
+                );
+
+            font-size: 11px;
+        }
+
+        /* Buttons */
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .back-home,
+        .logout {
+            flex: 1;
+
+            min-height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-family:
+                "Noto Sans Thai",
+                sans-serif;
+
+            font-size: 12px;
+
+            transition: .3s ease;
+        }
+
+        .back-home {
+            color: #73564f;
+
+            background:
+                rgba(255,241,244,.8);
+
+            border:
+                1px solid
+                rgba(190,145,108,.25);
+        }
+
+        .logout {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #a87970,
+                    #c49b62
+                );
+
+            box-shadow:
+                0 8px 25px
+                rgba(174,125,115,.18);
+        }
+
+        .back-home:hover {
+            transform: translateY(-3px);
+
+            background: #fff;
+
+            box-shadow:
+                0 8px 25px
+                rgba(174,125,115,.12);
+        }
+
+        .logout:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(174,125,115,.28);
+        }
+
+        /* Footer */
+
+        .footer {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+
+            padding:
+                60px 20px 40px;
+
+            border-top:
+                1px solid
+                rgba(190,145,108,.18);
+
+            background:
+                rgba(255,248,249,.6);
+        }
+
+        .footer-logo {
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 34px;
+            letter-spacing: 8px;
+
+            color: #76584f;
+        }
+
+        .footer-text {
+            margin-top: 8px;
+
+            font-size: 8px;
+            letter-spacing: 4px;
+
+            color: #b18b68;
+        }
+
+        .footer-copy {
+            margin-top: 22px;
+
+            font-size: 9px;
+            letter-spacing: 1px;
+
+            color: #a78c86;
+        }
+
+        /* Back To Top */
+
+        #scrollTop {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: 0;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #b98d89,
+                    #c9a265
+                );
+
+            box-shadow:
+                0 8px 25px
+                rgba(160,111,105,.25);
+
+            cursor: pointer;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: translateY(15px);
+
+            transition: .3s ease;
+
+            z-index: 200;
+        }
+
+        #scrollTop.show {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translateY(0);
+        }
+
+        #scrollTop:hover {
+            transform:
+                translateY(-4px);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 1100px) {
+
+            .navbar {
+                grid-template-columns:
+                    190px
+                    1fr
+                    190px;
+
+                padding: 0 3%;
+            }
+
+            .nav-menu {
+                gap: 18px;
+            }
+
+            .nav-menu a {
+                font-size: 10px;
+            }
+
+            .logo-main {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                grid-template-columns: 1fr auto;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-right {
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .top-bar {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            .navbar {
+                height: 75px;
+            }
+
+            .logo-main {
+                font-size: 27px;
+                letter-spacing: 5px;
+            }
+
+            .logo-sub {
+                font-size: 6px;
+                letter-spacing: 3px;
+            }
+
+            .nav-button {
+                min-width: 42px;
+                width: 42px;
+                padding: 0;
+            }
+
+            .nav-button span {
+                display: none;
+            }
+
+            .page-header {
+                padding:
+                    55px 15px 30px;
+            }
+
+            .page-header h1 {
+                font-size: 45px;
+            }
+
+            .page-header p {
+                font-size: 11px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .profile-top {
+                padding:
+                    30px 25px;
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .welcome h2 {
+                font-size: 27px;
+            }
+
+            .welcome p {
+                font-size: 10px;
+            }
+
+            .account-content {
+                padding:
+                    30px 25px 35px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .row {
+                display: block;
+
+                padding:
+                    15px 5px;
+            }
+
+            .label {
+                width: auto;
+
+                margin-bottom: 5px;
+
+                display: block;
+            }
+
+            .value {
+                font-size: 12px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .back-home,
+            .logout {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .logo-main {
+                font-size: 23px;
+                letter-spacing: 4px;
+            }
+
+            .profile-top {
+                padding:
+                    25px 18px;
+            }
+
+            .account-content {
+                padding:
+                    10px 18px 30px;
+            }
+
+            .page-header h1 {
+                font-size: 40px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Sparkles -->
+    <div class="sparkles">
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        ✦ ยินดีต้อนรับสู่ VELOURA PERFUMES · FRAGRANCE THAT TELLS YOUR STORY ✦
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-main">
+                VELOURA
+            </div>
+
+            <div class="logo-sub">
+                PERFUMES
+            </div>
+
+        </a>
+
+        <div class="nav-menu">
+
+            <a href="index.html">หน้าแรก</a>
+
+            <a href="products.html">สินค้า</a>
+
+            <a href="about.html">เกี่ยวกับเรา</a>
+
+            <a href="collection.html">คอลเลกชัน</a>
+
+            <a href="find-scent.html">ค้นหากลิ่น</a>
+
+            <a href="contact.html">ติดต่อเรา</a>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="profile.html"
+                class="nav-button"
+                title="บัญชีของฉัน">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>
+                    บัญชี
+                </span>
+
+            </a>
+
+            <a href="cart.html"
+                class="nav-button"
+                title="รถเข็น">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span>
+                    รถเข็น
+                </span>
+
+            </a>
+
+        </div>
+
+        <div class="nav-sparkle ns1">
+            ✦
+        </div>
+
+        <div class="nav-sparkle ns2">
+            ✧
+        </div>
+
+        <div class="nav-sparkle ns3">
+            ⋆
+        </div>
+
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+
+        <div class="small-title">
+            MY ACCOUNT
+        </div>
+
+        <h1>
+            บัญชีของฉัน
+        </h1>
+
+        <p>
+            จัดการข้อมูลส่วนตัวและกลิ่นหอมที่คุณชื่นชอบ
+        </p>
+
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+
+        <div class="profile-card">
+
+            <!-- Profile Top -->
+            <div class="profile-top">
+
+                <div class="avatar">
+                    P
+                </div>
+
+                <div class="welcome">
+
+                    <h2>
+                        ยินดีต้อนรับ, คุณปวีณ์นุช
+                    </h2>
+
+                    <p>
+                        สมาชิกของ VELOURA PERFUMES ✦
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Account Content -->
+            <div class="account-content">
+
+                <!-- Personal -->
+                <div class="section-title">
+                    ข้อมูลส่วนตัว
+                </div>
+
+                <div class="section-line"></div>
+
+                <div class="row">
+
+                    <div class="label">
+                        Username
+                    </div>
+
+                    <div class="value">
+                        primy
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="label">
+                        Email
+                    </div>
+
+                    <div class="value">
+                        primy@example.com
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="label">
+                        ชื่อ-นามสกุล
+                    </div>
+
+                    <div class="value">
+                        คุณปวีณ์นุช นามแดง
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="label">
+                        ที่อยู่
+                    </div>
+
+                    <div class="value">
+                        ยังไม่ได้ระบุ
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="label">
+                        เบอร์โทรศัพท์
+                    </div>
+
+                    <div class="value">
+                        08X-XXX-XXXX
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="label">
+                        วันที่สมัคร
+                    </div>
+
+                    <div class="value">
+                        2026-10-07
+                    </div>
+
+                </div>
+
+                <!-- Favorite Scents -->
+                <div class="section-title">
+
+                    กลิ่นหอมที่คุณชื่นชอบ
+
+                </div>
+
+                <div class="section-line"></div>
+
+                <div class="row">
+
+                    <div class="label">
+                        กลิ่นที่ชอบ
+                    </div>
+
+                    <div class="value">
+
+                        <div class="scent-tags">
+
+                            <span class="scent-tag">
+                                VELOURA ROSE
+                            </span>
+
+                            <span class="scent-tag">
+                                MIDNIGHT ALLURE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Newsletter -->
+                <div class="row">
+
+                    <div class="label">
+                        Newsletter
+                    </div>
+
+                    <div class="value">
+
+                        <span class="newsletter-yes">
+                            รับข่าวสารและโปรโมชั่นจาก VELOURA
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons">
+
+                    <a href="index.html"
+                        class="back-home">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        กลับหน้าหลัก
+
+                    </a>
+
+                    <a href="index.html"
+                        class="logout">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        ออกจากระบบ
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            VELOURA
+        </div>
+
+        <div class="footer-text">
+            PERFUMES · FRAGRANCE THAT TELLS YOUR STORY
+        </div>
+
+        <div class="footer-copy">
+            © VELOURA PERFUMES · ALL RIGHTS RESERVED
+        </div>
+
+    </footer>
+
+    <!-- Back To Top -->
+    <button id="scrollTop" title="กลับด้านบน">
+
+        <i class="fa-solid fa-chevron-up"></i>
+
+    </button>
+
+    <script>
+
+        /* Random Sparkles */
+
+        const sparkleBox =
+            document.querySelector(".sparkles");
+
+        const sparkleItems =
+            sparkleBox.querySelectorAll("span");
+
+        sparkleItems.forEach(function(item) {
+
+            item.style.left =
+                Math.random() * 100 + "%";
+
+            item.style.top =
+                Math.random() * 100 + "%";
+
+            item.style.fontSize =
+                (Math.random() * 8 + 6) + "px";
+
+            item.style.animationDelay =
+                (Math.random() * 5) + "s";
+
+            item.style.animationDuration =
+                (Math.random() * 4 + 4) + "s";
+
+        });
+
+        /* Back To Top */
+
+        const scrollTop =
+            document.getElementById("scrollTop");
+
+        window.addEventListener(
+            "scroll",
+            function() {
+
+                if (window.scrollY > 350) {
+
+                    scrollTop.classList.add("show");
+
+                } else {
+
+                    scrollTop.classList.remove("show");
+
+                }
+
+            }
+        );
+
+        scrollTop.addEventListener(
+            "click",
+            function() {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
